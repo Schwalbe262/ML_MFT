@@ -1,12 +1,12 @@
 import pandas as pd
 import numpy as np
 
-def load_data(fn,*pp):
+def load_data(fn, pp=None):
 
     csv = pd.read_csv(fn)
     csv = csv.dropna(axis=0).reset_index(drop=True) #drop NaN
 
-    if pp == 1 : # post process (elemenate outlier data)
+    if pp == 1 : # post process (option : elemenate outlier data)
 
         csv = csv[csv['Lmt']>0.1].reset_index(drop=True)
         csv = csv[csv['Lmr']>0.1].reset_index(drop=True)

@@ -20,3 +20,10 @@ def drop_output(dataset, parameter) :
 
 
 
+def cut_data(dataset, parameter, lo=float('-inf'), hi=float('inf')) :
+
+    dataset = dataset[dataset[parameter]>lo].reset_index(drop=True) # cut lower bound
+    dataset = dataset[dataset[parameter]<hi].reset_index(drop=True) # cut upper bound
+
+
+    return dataset

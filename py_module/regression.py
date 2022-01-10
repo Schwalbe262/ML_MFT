@@ -1,6 +1,6 @@
 from pycaret.regression import *
 
-def regression_basic(dataset, parameter, frac_ratio=0.9, silent=True, save_en=False, save_model_name="model") :
+def regression_basic(dataset, parameter, algorithm="lgbm", frac_ratio=0.9, silent=True, save_en=False, save_model_name="model") :
 
 
     # split data for ML (train set / test set)
@@ -12,8 +12,7 @@ def regression_basic(dataset, parameter, frac_ratio=0.9, silent=True, save_en=Fa
 
 
     # create model
-    #lgbm = create_model('lightgbm',num_leaves=60, max_depth=20)
-    model = create_model('lightgbm')
+    model = create_model(algorithm)
 
 
     # save model

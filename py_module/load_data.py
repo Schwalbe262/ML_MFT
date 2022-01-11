@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-def load_data(fn, pp=None):
+def load_data(fn, pp=None, size_en=False, size=100000):
 
     csv = pd.read_csv(fn)
     csv = csv.dropna(axis=0).reset_index(drop=True) #drop NaN
@@ -12,6 +12,9 @@ def load_data(fn, pp=None):
         csv = csv[csv['Lmr']>0.1].reset_index(drop=True)
         csv['k'] = -csv['k']
         csv = csv[csv['k']>0].reset_index(drop=True)
+
+    if size_en == True :
+        csv = csv.sample(n=size).reset_index(drop=True)
 
     #calculate R
     array_len = len(csv)

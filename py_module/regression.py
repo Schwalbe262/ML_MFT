@@ -1,5 +1,7 @@
 from pycaret.regression import *
 
+# see ref : https://pycaret.readthedocs.io/en/latest/api/regression.html
+
 def regression_basic(dataset, parameter, algorithm="ligthgbm", frac_ratio=0.9, silent=True, save_en=False, save_model_name="model", new_feature_names=[]) :
 
 
@@ -24,6 +26,14 @@ def regression_basic(dataset, parameter, algorithm="ligthgbm", frac_ratio=0.9, s
         save_model(model, save_model_name)
 
     return [model, data_seen, data_unseen]
+
+
+
+def tune_model(model, n_iter=10, optimize="R2", early_stopping=False, choose_better=False, verbose=False) :
+
+    tuned_model = pycaret.regression.tune_model(model, n_iter=n_iter, optimize=optimize, early_stopping=early_stopping, choose_better=choose_better, verbose=verbose)
+
+    return tuned_model
 
 
 def test() :

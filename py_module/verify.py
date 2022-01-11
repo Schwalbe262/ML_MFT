@@ -16,6 +16,6 @@ def verify_model(model, data_seen, data_unseen, parameter) :
     MAE_data_unseen = mean_absolute_error(data_unseen[parameter],data_unseen_result)
     MSE_data_unseen = mean_squared_error(data_unseen[parameter],data_unseen_result)
     RMSE_data_unseen = mean_squared_error(data_unseen[parameter],data_unseen_result, squared=False)
-    MPE_data_unseen = error_sum2/number2
+    MPE_data_unseen = error_sum2/number2 * 100 # unit : percent
 
     return np.array([R2_data_unseen, MAE_data_unseen, MSE_data_unseen, RMSE_data_unseen, MPE_data_unseen])

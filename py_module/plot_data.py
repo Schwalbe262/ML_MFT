@@ -19,10 +19,11 @@ def plot_histogram(raw_data, parameter, bins=100, plt_size=[6,5], fontsize={}, g
         else :
             plt.title(title)
 
-
     # histogram
     plt.hist(raw_data[parameter], bins=bins)
     plt.show()
+
+
 
 
 

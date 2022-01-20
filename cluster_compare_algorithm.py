@@ -8,6 +8,8 @@ from pycaret.regression import *
 import time
 from datetime import datetime
 
+import os
+
 # import module (user defined function)
 
 from py_module.load_data import load_data
@@ -22,7 +24,7 @@ from py_module.verify import *
 
 # === import raw_data (from csv file) ===
 
-filename = "./Data_2021_10_14_v1 (N98923)/Data.csv" # csv file directory and name
+filename = os.path.abspath(__file__)+"./Data_2021_10_14_v1 (N98923)/Data.csv" # csv file directory and name
 
 raw_data = load_data(fn=filename, pp=1)
 

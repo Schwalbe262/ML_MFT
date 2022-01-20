@@ -14,4 +14,4 @@ date
 ## 
 #module add  ANACONDA/2020.11
 
-python ./cluster_compare_algorithm.py
+python ~/ML_MFT/cluster_compare_algorithm.py

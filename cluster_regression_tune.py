@@ -157,17 +157,17 @@ print(f'total time : {timetime_e}')
 
 print("\n\n\n\n\n")
 print("Summary")
-print("\n\n")
+print("\n")
 print(f'algorithm : {args.algorithm}')
 print(f'iteration : {args.n_iter}')
-print("\n\n")
-print(f'algorithm retression total time : {timetime_t}')
+print("\n")
+print(f'algorithm regression total time : {timetime_t}')
 print(result)
-print("\n\n")
+print("\n")
 print(f'algorithm tuning total time : {timetime_t}')
 print(tune_result)
-print("\n\n")
-print(f'total time : {timetime_e}')
+print("\n")
+print(f'total time : {timetime_e}\n\n\n')
 
 
 

@@ -26,6 +26,9 @@ parser.add_argument('-n', '--n_iter', type=int, nargs='+', metavar='N', help='tu
 
 args = parser.parse_args()
 
+args.algorithm = args.algorithm[0]
+args.n_iter = args.n_iter[0]
+
 print(args.algorithm)
 print(args.n_iter)
 

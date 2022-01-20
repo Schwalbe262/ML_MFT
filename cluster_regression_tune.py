@@ -161,13 +161,13 @@ print("\n")
 print(f'algorithm : {args.algorithm}')
 print(f'iteration : {args.n_iter}')
 print("\n")
-print(f'algorithm regression total time : {timetime_t}')
+print(f'algorithm regression total time : {timetime_t}s')
 print(result)
 print("\n")
-print(f'algorithm tuning total time : {timetime_t}')
+print(f'algorithm tuning total time : {timetime_t}s')
 print(tune_result)
 print("\n")
-print(f'total time : {timetime_e}\n\n\n')
+print(f'total time : {timetime_e}s\n\n\n')
 
 
 

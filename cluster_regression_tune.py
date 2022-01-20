@@ -9,6 +9,7 @@ import time
 from datetime import datetime
 
 import os
+import argparse
 
 # import module (user defined function)
 
@@ -17,6 +18,13 @@ from py_module.plot_data import plot_histogram
 from py_module.regression import *
 from py_module.pre_processing import *
 from py_module.verify import *
+
+
+parser = argparse.ArgumentParser(description='Process some integers.')
+parser.add_argument('-al', '--algorithm', type=str, nargs='+', metavar='N', help='algorithm name')
+parser.add_argument('-n', '--n_iter', type=int, nargs='+', metavar='N', help='tuning iteration')
+
+args = parser.parse_args()
 
 
 
@@ -79,49 +87,25 @@ print("\n======== processed_data ========\n")
 
 
 
-# === compare algorithm ===
+# === regression ===
 # 여러 regression 알고리즘 중 가장 높은 성능을 내는 알고리즘 탐색 (모든 알고리즘 탐색)
 
-start_time_t = time.time()
-
-# activate logger
-[model, data_seen, data_unseen] = regression_basic(processed_data, parameter, algorithm="lightgbm", frac_ratio=0.9, save_en=False, save_model_name="model", new_feature_names=new_feature_names)
-
-
-
-
-
-# variable
-algorithm_list = models().index
-except_list = ["kr","svm","huber"] # algorithm list to exclude from train
 result = []
 
+start_time_t = time.time()
+start_time = time.time()
 
-# eleminate algorithm in exception list
-for al_name in except_list :
+[model, data_seen, data_unseen] = regression_basic(processed_data, parameter, algorithm=args.algorithm, new_feature_names=new_feature_names)
+[R2, MAE, MSE, RMSE, MPE] = verify_model(model, data_seen, data_unseen, parameter)
 
-    algorithm_list = algorithm_list[algorithm_list!=al_name]
+end_time= time.time()
+timetime = end_time - start_time
 
-    
-# train each algorithm
-for al_name in algorithm_list :
-
-    start_time = time.time()
-
-    [model, data_seen, data_unseen] = regression_basic(processed_data, parameter, algorithm=al_name, new_feature_names=new_feature_names)
-    [R2, MAE, MSE, RMSE, MPE] = verify_model(model, data_seen, data_unseen, parameter)
-
-    end_time= time.time()
-    timetime = end_time - start_time
-
-    result.append([al_name, R2, MAE, MSE, RMSE, MPE, timetime])
-
-    print(f'{al_name} > timetime')
+result.append([args.algorithm, R2, MAE, MSE, RMSE, MPE, timetime])
 
 end_time_t = time.time()
 timetime_t = end_time_t - start_time_t
-print(f'algorithm compare total time : {timetime_t}')
-al_time = timetime_t
+print(f'regression total time : {timetime_t}')
 
 
 # compare model result
@@ -130,50 +114,19 @@ result = pd.DataFrame(result,columns = ["algorithm","R2","MAE","MSE","RMSE","MPE
 print(result)
 
 
-# ==================================================================================================================================================================
-# ==================================================================================================================================================================
-# ==================================================================================================================================================================
+
+# === tune ===
+
+result = []
 
 start_time_t = time.time()
 
-# compare algorithm (tuned case)
-# 여러 regression 알고리즘 중 가장 높은 성능을 내는 알고리즘 탐색 (모든 알고리즘 탐색)
-# 각각의 algorithm은 auto tune을 이용하여 튜닝
+tuned_model = tune_model(model, n_iter=args.n_iter, optimize="MAE")
+[R2, MAE, MSE, RMSE, MPE] = verify_model(tuned_model, data_seen, data_unseen, parameter)
+end_time= time.time()
+timetime = end_time - start_time
+result.append([args.algorithm, R2, MAE, MSE, RMSE, MPE, timetime])
 
-# activate logger
-[model, data_seen, data_unseen] = regression_basic(processed_data, parameter, algorithm="lightgbm", frac_ratio=0.9, save_en=False, save_model_name="model", new_feature_names=new_feature_names)
-
-
-# variable
-algorithm_list = models().index
-except_list = ["kr","svm","huber"] # algorithm list to exclude from train
-result = []
-
-
-# eleminate algorithm in exception list
-for al_name in except_list :
-
-    algorithm_list = algorithm_list[algorithm_list!=al_name]
-
-    
-# train each algorithm
-for al_name in algorithm_list :
-
-    start_time = time.time()
-
-    [model, data_seen, data_unseen] = regression_basic(processed_data, parameter, algorithm=al_name, new_feature_names=new_feature_names)
-    print(f'{al_name}')
-
-    try : 
-        tuned_model = tune_model(model, n_iter=100, optimize="MAE")
-        [R2, MAE, MSE, RMSE, MPE] = verify_model(tuned_model, data_seen, data_unseen, parameter)
-        end_time= time.time()
-        timetime = end_time - start_time
-        result.append([al_name, R2, MAE, MSE, RMSE, MPE, timetime])
-        print(f'{al_name} > timetime')
-    except :
-        print(f'error: {al_name}')
-    
 
 end_time_t = time.time()
 timetime_t = end_time_t - start_time_t
@@ -199,13 +152,21 @@ print(f'total time : {timetime_e}')
 print("\n\n\n\n\n")
 print("Summary")
 print("\n\n")
-print(f'algorithm compare total time : {al_time}')
+print(f'algorithm : {args.algorithm}')
+print(f'iteration : {args.n_iter}')
+print("\n\n")
+print(f'algorithm retression total time : {timetime_t}')
 print(result)
 print("\n\n")
 print(f'algorithm tuning total time : {timetime_t}')
 print(tune_result)
 print("\n\n")
 print(f'total time : {timetime_e}')
+
+
+
+
+
 
 
 

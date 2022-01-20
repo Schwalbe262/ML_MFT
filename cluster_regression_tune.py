@@ -26,6 +26,9 @@ parser.add_argument('-n', '--n_iter', type=int, nargs='+', metavar='N', help='tu
 
 args = parser.parse_args()
 
+print(parser.algorithm)
+print(parser.n_iter)
+
 
 
 start_time_e = time.time() # total execution time

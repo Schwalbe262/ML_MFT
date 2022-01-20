@@ -24,7 +24,7 @@ from py_module.verify import *
 
 # === import raw_data (from csv file) ===
 
-filename = os.path.abspath("")+"../Data_2021_10_14_v1 (N98923)/Data.csv" # csv file directory and name
+filename = os.path.abspath("")+"/../Data_2021_10_14_v1 (N98923)/Data.csv" # csv file directory and name
 
 print(filename)
 

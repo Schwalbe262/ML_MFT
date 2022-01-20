@@ -84,7 +84,7 @@ start_time_t = time.time()
 [model, data_seen, data_unseen] = regression_basic(processed_data, parameter, algorithm="lightgbm", frac_ratio=0.9, save_en=False, save_model_name="model", new_feature_names=new_feature_names)
 
 
-"""
+
 
 
 # variable
@@ -118,9 +118,11 @@ print(f'total time : {timetime_t}')
 
 
 # compare model result
-pd.DataFrame(result,columns = ["algorithm","R2","MAE","MSE","RMSE","MPE(%)","time(s)"]).sort_values(by='R2' ,ascending=False).reset_index(drop=True)
+result = pd.DataFrame(result,columns = ["algorithm","R2","MAE","MSE","RMSE","MPE(%)","time(s)"]).sort_values(by='R2' ,ascending=False).reset_index(drop=True)
 
+print(result)
 
+"""
 
 """
 

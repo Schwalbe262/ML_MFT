@@ -112,6 +112,7 @@ result.append([args.algorithm, R2, MAE, MSE, RMSE, MPE, timetime])
 end_time_t = time.time()
 timetime_t = end_time_t - start_time_t
 print(f'regression total time : {timetime_t}')
+reg_time = timetime_t
 
 
 # compare model result
@@ -161,7 +162,7 @@ print("\n")
 print(f'algorithm : {args.algorithm}')
 print(f'iteration : {args.n_iter}')
 print("\n")
-print(f'algorithm regression total time : {timetime_t}s')
+print(f'algorithm regression total time : {reg_time}s')
 print(result)
 print("\n")
 print(f'algorithm tuning total time : {timetime_t}s')

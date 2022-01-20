@@ -89,7 +89,7 @@ start_time_t = time.time()
 
 # variable
 algorithm_list = models().index
-except_list = [] # algorithm list to exclude from train
+except_list = ["kr","svm"] # algorithm list to exclude from train
 result = []
 
 

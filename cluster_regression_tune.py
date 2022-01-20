@@ -130,13 +130,9 @@ start_time_t = time.time()
 
 tuned_model = tune_model(model, n_iter=args.n_iter, optimize="MAE")
 [R2, MAE, MSE, RMSE, MPE] = verify_model(tuned_model, data_seen, data_unseen, parameter)
-end_time= time.time()
-timetime = end_time - start_time
-result.append([args.algorithm, R2, MAE, MSE, RMSE, MPE, timetime])
-
-
-end_time_t = time.time()
+end_time_t= time.time()
 timetime_t = end_time_t - start_time_t
+result.append([args.algorithm, R2, MAE, MSE, RMSE, MPE, timetime])
 print(f'algorithm tuning total time : {timetime_t}')
     
 # compare model result
@@ -158,16 +154,16 @@ print(f'total time : {timetime_e}')
 
 print("\n\n\n\n\n")
 print("Summary")
-print("\n")
+print("")
 print(f'algorithm : {args.algorithm}')
 print(f'iteration : {args.n_iter}')
-print("\n")
+print("")
 print(f'algorithm regression total time : {reg_time}s')
 print(result)
-print("\n")
+print("")
 print(f'algorithm tuning total time : {timetime_t}s')
 print(tune_result)
-print("\n")
+print("")
 print(f'total time : {timetime_e}s\n\n\n')
 
 

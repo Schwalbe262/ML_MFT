@@ -93,7 +93,7 @@ start_time_t = time.time()
 
 # variable
 algorithm_list = models().index
-except_list = ["kr","svm"] # algorithm list to exclude from train
+except_list = ["kr","svm","huber"] # algorithm list to exclude from train
 result = []
 
 
@@ -125,6 +125,61 @@ print(f'algorithm compare total time : {timetime_t}')
 result = pd.DataFrame(result,columns = ["algorithm","R2","MAE","MSE","RMSE","MPE(%)","time(s)"]).sort_values(by='R2' ,ascending=False).reset_index(drop=True)
 
 print(result)
+
+
+# ==================================================================================================================================================================
+# ==================================================================================================================================================================
+# ==================================================================================================================================================================
+
+start_time_t = time.time()
+
+# compare algorithm (tuned case)
+# 여러 regression 알고리즘 중 가장 높은 성능을 내는 알고리즘 탐색 (모든 알고리즘 탐색)
+# 각각의 algorithm은 auto tune을 이용하여 튜닝
+
+# activate logger
+[model, data_seen, data_unseen] = regression_basic(processed_data, parameter, algorithm="lightgbm", frac_ratio=0.9, save_en=False, save_model_name="model", new_feature_names=new_feature_names)
+
+
+# variable
+algorithm_list = models().index
+except_list = ["kr","svm","huber"] # algorithm list to exclude from train
+result = []
+
+
+# eleminate algorithm in exception list
+for al_name in except_list :
+
+    algorithm_list = algorithm_list[algorithm_list!=al_name]
+
+    
+# train each algorithm
+for al_name in algorithm_list :
+
+    start_time = time.time()
+
+    [model, data_seen, data_unseen] = regression_basic(processed_data, parameter, algorithm=al_name, new_feature_names=new_feature_names)
+    print(f'{al_name}')
+
+    try : 
+        tuned_model = tune_model(model, n_iter=100, optimize="MAE")
+        [R2, MAE, MSE, RMSE, MPE] = verify_model(tuned_model, data_seen, data_unseen, parameter)
+        end_time= time.time()
+        timetime = end_time - start_time
+        result.append([al_name, R2, MAE, MSE, RMSE, MPE, timetime])
+    except :
+        print(f'error: {al_name}')
+    
+
+end_time_t = time.time()
+timetime_t = end_time_t - start_time_t
+print(f'algorithm tuning total time : {timetime_t}')
+    
+# compare model result
+tune_result = pd.DataFrame(result,columns = ["algorithm","R2","MAE","MSE","RMSE","MPE(%)","time(s)"]).sort_values(by='R2' ,ascending=False).reset_index(drop=True)
+
+print(tune_result)
+
 
 
 

@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=47    # Cores per node
+#SBATCH --nodes=3
+#SBATCH --ntasks-per-node=44    # Cores per node
 #SBATCH --partition=gpu1        # Partition Name (cpu1, gpu1, hgx)
 ##
 #SBATCH --job-name=com_al

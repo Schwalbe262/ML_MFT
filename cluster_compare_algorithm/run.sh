@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=47    # Cores per node
-#SBATCH --partition=cpu1        # Partition Name (cpu1, gpu1, hgx)
+#SBATCH --partition=gpu1        # Partition Name (cpu1, gpu1, hgx)
 ##
-#SBATCH --job-name=SlurmExample
+#SBATCH --job-name=com_al
 #SBATCH -o SLURM.%N.%j.out         # STDOUT
 #SBATCH -e SLURM.%N.%j.err         # STDERR
 ##

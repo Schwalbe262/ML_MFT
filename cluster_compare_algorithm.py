@@ -31,9 +31,11 @@ filename = os.path.abspath("")+"/../Data_2021_10_14_v1 (N98923)/Data.csv" # csv 
 raw_data = load_data(fn=filename, pp=1)
 
 print(f'raw_data size : {raw_data.shape}')
+print("\n======== raw_data ========\n")
 print(raw_data)
+print("\n======== raw_data ========\n")
 
-"""
+
 
 
 ## === dataset pre-processing ===
@@ -64,8 +66,13 @@ processed_data = add_feature(processed_data, parameter, new_feature_names = new_
 
 processed_data
 
+print(f'processed_data size : {processed_data.shape}')
+print("\n======== processed_data ========\n")
+print(processed_data)
+print("\n======== processed_data ========\n")
 
 
+"""
 
 
 # === compare algorithm ===

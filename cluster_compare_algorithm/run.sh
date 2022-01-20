@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --nodes=3
+#SBATCH --nodes=5
 #SBATCH --ntasks-per-node=44    # Cores per node
 #SBATCH --partition=gpu1        # Partition Name (cpu1, gpu1, hgx)
 ##

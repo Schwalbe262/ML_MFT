@@ -26,7 +26,11 @@ from py_module.verify import *
 
 filename = os.path.abspath(__file__)+"./Data_2021_10_14_v1 (N98923)/Data.csv" # csv file directory and name
 
+print(filename)
+
 raw_data = load_data(fn=filename, pp=1)
+
+"""
 
 
 ## === dataset pre-processing ===
@@ -105,7 +109,7 @@ pd.DataFrame(result,columns = ["algorithm","R2","MAE","MSE","RMSE","MPE(%)","tim
 
 
 
-
+"""
 
 
 

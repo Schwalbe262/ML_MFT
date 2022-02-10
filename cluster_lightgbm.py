@@ -37,7 +37,7 @@ filename = os.path.abspath("")+"/../Data_2021_10_14_v1 (N98923)/Data.csv" # csv 
 
 #print(filename)
 
-raw_data = load_data(fn=filename, pp=1)
+raw_data = pd.read_csv(filename)
 
 
 # 학습할 파라미터를 제외한 나머지 아웃풋 삭제

@@ -21,6 +21,8 @@ from sklearn.metrics import r2_score
 from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import mean_squared_error 
 
+import os
+
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
@@ -31,7 +33,11 @@ pd.options.display.max_seq_items = None
 
 # data import
 
-raw_data = pd.read_csv("./Data_2021_10_14_v1 (N98923)/Data.csv")
+filename = os.path.abspath("")+"/../Data_2021_10_14_v1 (N98923)/Data.csv" # csv file directory and name
+
+#print(filename)
+
+raw_data = load_data(fn=filename, pp=1)
 
 
 # 학습할 파라미터를 제외한 나머지 아웃풋 삭제

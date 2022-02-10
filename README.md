@@ -1,7 +1,7 @@
 # ML_MFT
 medium frequency transformer optimization using ML
 
-## lightgbm.ipynb
+## N001_lightgbm.ipynb
 ###### 1. import module
 ###### 2. data import & remove output data except target parameter & drop NaN
 ###### 3. data info check

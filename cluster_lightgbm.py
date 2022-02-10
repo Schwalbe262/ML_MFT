@@ -154,6 +154,8 @@ parameters = {
     'num_leaves' : [31,60,80,100,127],
     }
 
+kfold = KFold(n_splits=5, random_state=765, shuffle=True)
+
 #cv=5 5번의 교차검증.
 grid = GridSearchCV(LGBMRegressor(random_state=0), verbose=2, param_grid = parameters, cv=kfold)
 grid.fit(X_train, Y_train)

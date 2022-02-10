@@ -2,7 +2,7 @@
 medium frequency transformer optimization using ML
 
 ## N001_lightgbm.ipynb
-- 1. import module
+  - 1. import module
 - 2. data import & remove output data except target parameter & drop NaN
 * 3. data info check
 4. check outlier

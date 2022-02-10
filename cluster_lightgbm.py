@@ -29,25 +29,6 @@ pd.set_option('display.max_rows', None)
 pd.options.display.max_seq_items = None
 
 
-# 이상치를 찾는 함수
-def get_outlier(df=None, column=None, weight=1.5):
-    
-    # column 데이터만 추출, 1/4 분위와 3/4 분위 지점을 np.percentile로 구함. 
-    data = df[column]
-    quantile_25 = np.percentile(data.values, 25)  # 1/4 분위
-    quantile_75 = np.percentile(data.values, 75)  # 3/4 분위
-    
-    # IQR을 구하고, IQR에 1.5를 곱하여 최대값과 최소값 지점 구함. 
-    iqr = quantile_75 - quantile_25
-    iqr_weight = iqr * weight
-    lowest_val = quantile_25 - iqr_weight  # 이상치 최소 기준
-    highest_val = quantile_75 + iqr_weight # 이상치 최대 기준
-    
-    # 최대값 보다 크거나, 최소값 보다 작은 값을 아웃라이어로 설정하고 DataFrame index 반환. 
-    outlier_index = data[(data < lowest_val) | (data > highest_val)].index
-    
-    return outlier_index
-
 
 # data import
 
@@ -74,11 +55,25 @@ raw_data = raw_data.dropna()
 col_input = list(raw_data.columns)[:-1]
 print(col_input)
 
+
+print ("OUTLIER START")
+
 # outlier 탐색 및 제거
 outlier_index = {}
 for i, colName in enumerate(col_input):
-     outlier_index[i] = get_outlier(df=raw_data, column=f'{colName}', weight=1.5)
-outlier_index
+    data = raw_data[f'{colName}']
+    # column 데이터만 추출, 1/4 분위와 3/4 분위 지점을 np.percentile로 구함. 
+    quantile_25 = np.percentile(data.values, 25)  # 1/4 분위
+    quantile_75 = np.percentile(data.values, 75)  # 3/4 분위
+    # IQR을 구하고, IQR에 1.5를 곱하여 최대값과 최소값 지점 구함. 
+    iqr = quantile_75 - quantile_25
+    iqr_weight = iqr * weight
+    lowest_val = quantile_25 - iqr_weight  # 이상치 최소 기준
+    highest_val = quantile_75 + iqr_weight # 이상치 최대 기준
+    # 최대값 보다 크거나, 최소값 보다 작은 값을 아웃라이어로 설정하고 DataFrame index 반환. 
+    outlier_index[i] = data[(data < lowest_val) | (data > highest_val)].index
+
+print ("OUTLIER END")
 
 # 각각의 숫자들 리스트 안에 넣기
 outlier_list = []

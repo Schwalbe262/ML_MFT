@@ -112,8 +112,6 @@ raw_data.shape
 X = raw_data.drop(columns=parameter)
 Y = raw_data[parameter]
 
-raw_data.to_csv("raw_data.csv", mode='w')
-
 X_train,X_test,Y_train,Y_test = train_test_split(X,Y,test_size=0.2,random_state = 765)
 
 

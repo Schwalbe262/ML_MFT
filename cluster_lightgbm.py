@@ -61,6 +61,7 @@ print ("OUTLIER START")
 # outlier 탐색 및 제거
 outlier_index = {}
 for i, colName in enumerate(col_input):
+    weight = 1.5
     data = raw_data[f'{colName}']
     # column 데이터만 추출, 1/4 분위와 3/4 분위 지점을 np.percentile로 구함. 
     quantile_25 = np.percentile(data.values, 25)  # 1/4 분위

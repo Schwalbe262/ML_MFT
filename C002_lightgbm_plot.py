@@ -174,7 +174,7 @@ hyper_parameters = {
     'n_jobs' : -1
     }
 
-for n_estimators in [{args.n}] :
+for n_estimators in [args.n] :
     for max_depth in [-1,1,2,3,4,5,10,20,30,50] :    
         for num_leaves in [31,60,80,100,127] :
             for learning_rate in [0.001,0.01,0.05,0.1] :

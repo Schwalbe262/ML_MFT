@@ -36,11 +36,13 @@ import argparse
 parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument('-rn', '--result_name', type=str, nargs='+', metavar='N', help='rseult_file name')
 parser.add_argument('-ln', '--log_name', type=str, nargs='+', metavar='N', help='log_file name')
+parser.add_argument('-n', 'n_estimators', type=int, nargs='+', metavar='N', help='hyper parameter')
 
 args = parser.parse_args()
 
 args.rn = args.result_name[0]
 args.ln = args.log_name[0]
+args.n = args.n_estimators[0]
 
 f = open(args.ln, 'w')
 f.write(f'START : {datetime.now()}\n')
@@ -172,7 +174,7 @@ hyper_parameters = {
     'n_jobs' : -1
     }
 
-for n_estimators in [10,30,100,300,1000,3000,10000] :
+for n_estimators in [{args.n}] :
     for max_depth in [-1,1,2,3,4,5,10,20,30,50] :    
         for num_leaves in [31,60,80,100,127] :
             for learning_rate in [0.001,0.01,0.05,0.1] :

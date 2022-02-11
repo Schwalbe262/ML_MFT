@@ -43,7 +43,7 @@ args.rn = args.result_name[0]
 args.ln = args.log_name[0]
 
 f = open(args.ln, 'w')
-f.write(f'START : {datetime.now()}')
+f.write(f'START : {datetime.now()}\n')
 f.close()
 
 # 2. data import
@@ -176,8 +176,8 @@ for n_estimators in [10,30,100,300,1000,3000,10000] :
     for max_depth in [-1,1,2,3,4,5,10,20,30,50] :    
         for num_leaves in [31,60,80,100,127] :
             for learning_rate in [0.001,0.01,0.05,0.1] :
-                f = open(args.ln, 'w')
-                f.write(f'n_est/max_d/num_leaves/learning_rate : {n_estimators}/{max_depth}/{num_leaves}/{learning_rate} : {datetime.now()}')
+                f = open(args.ln, 'a')
+                f.write(f'n_est/max_d/num_leaves/learning_rate : {n_estimators}/{max_depth}/{num_leaves}/{learning_rate} : {datetime.now()}\n')
                 f.close()
                 model = LGBMRegressor(random_state=765, n_estimators=n_estimators, max_depth=max_depth, num_leaves=num_leaves, learning_rate=learning_rate, **hyper_parameters)
                 model.fit(X_train,Y_train)

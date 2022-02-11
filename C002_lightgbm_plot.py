@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import time
+from datetime import datetime
 
 from pycaret.regression import *
 
@@ -27,6 +28,18 @@ pd.set_option('display.max_rows', None)
 pd.options.display.max_seq_items = None
 
 import os
+import argparse
+
+
+
+parser = argparse.ArgumentParser(description='Process some integers.')
+parser.add_argument('-rn', '--result_name', type=str, nargs='+', metavar='N', help='rseult_file name')
+parser.add_argument('-ln', '--log_name', type=str, nargs='+', metavar='N', help='log_file name')
+
+args = parser.parse_args()
+
+args.rn = args.rn[0]
+args.ln = args.ln[0]
 
 
 
@@ -116,7 +129,7 @@ raw_data.shape
 X = raw_data.drop(columns=parameter)
 Y = raw_data[parameter]
 
-raw_data.to_csv("raw_data.csv", mode='w')
+#raw_data.to_csv("raw_data.csv", mode='w')
 
 X_train,X_test,Y_train,Y_test = train_test_split(X,Y,test_size=0.2,random_state = 765)
 
@@ -160,8 +173,10 @@ for n_estimators in [10,30,100,300,1000,3000,10000] :
     for max_depth in [-1,1,2,3,4,5,10,20,30,50] :    
         for num_leaves in [31,60,80,100,127] :
             for learning_rate in [0.001,0.01,0.05,0.1] :
-                print(f'n_est/max_d/num_leaves/learning_rate : {n_estimators}/{max_depth}/{num_leaves}/{learning_rate}')
-
+                f = open(args.ln, 'w')
+                now = time.localtime()
+                f.write(f'n_est/max_d/num_leaves/learning_rate : {n_estimators}/{max_depth}/{num_leaves}/{learning_rate} : {datetime.datetime.now()}')
+                f.close()
                 model = LGBMRegressor(random_state=765, n_estimators=n_estimators, max_depth=max_depth, num_leaves=num_leaves, learning_rate=learning_rate, **hyper_parameters)
                 model.fit(X_train,Y_train)
 
@@ -215,7 +230,7 @@ for n_estimators in [10,30,100,300,1000,3000,10000] :
                 temp = {"n_estimators":n_estimators,"learning_rate":learning_rate,"max_depth":max_depth,"num_leaves":num_leaves,"R2":np.mean(R2),"MAE":np.mean(MAE),"MSE":np.mean(MSE),"RMSE":np.mean(RMSE),"MAPE":np.mean(MAPE),"MPE":np.mean(MPE)}
                 result = result.append(temp, ignore_index=True)
 
-result.to_csv("tuning_result.csv", mode="w")
+result.to_csv(args.rn, mode="w")
 
 
 

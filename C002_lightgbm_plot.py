@@ -36,7 +36,7 @@ import argparse
 parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument('-rn', '--result_name', type=str, nargs='+', metavar='N', help='rseult_file name')
 parser.add_argument('-ln', '--log_name', type=str, nargs='+', metavar='N', help='log_file name')
-parser.add_argument('-n', 'n_estimators', type=int, nargs='+', metavar='N', help='hyper parameter')
+parser.add_argument('-n', '--n_estimators', type=int, nargs='+', metavar='N', help='hyper parameter')
 
 args = parser.parse_args()
 

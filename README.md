@@ -1,6 +1,9 @@
 # ML_MFT
 medium frequency transformer optimization using ML
 
+N001_lightgbm.ipynb : lightgbm 모델 생성 및 튜닝
+N002_lightgbm_plot.ipynb : lightgbm 모델 튜닝 및 하이퍼파라미터 시각화
+
 ## lightgbm.ipynb
 ###### 1. import module
 ###### 2. data import & remove output data except target parameter & drop NaN

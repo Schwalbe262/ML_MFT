@@ -40,8 +40,8 @@ def run_simul(version_idx_str):
     coil_width1_range = [2, 10, 0.5, 1] 
     coil_width2_range = [2, 10, 0.5, 1] 
 
-    move_z1_range = [0.5,5,0.5,1]
-    move_z2_range = [0.5,5,0.5,1]
+    move_z1_range = [1,10,0.5,1]
+    move_z2_range = [1,10,0.5,1]
 
     offset_z1_range = [-20,20,0.5,1]
     offset_z2_range = [-20,20,0.5,1]
@@ -183,17 +183,17 @@ def run_simul(version_idx_str):
     print(temp3)
 
 
-    data1 = np.loadtxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script1\inductance.csv', delimiter=",")
+    data1 = np.loadtxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script14\inductance.csv', delimiter=",")
     new_data1 = np.vstack((data1, temp1))
-    np.savetxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script1\inductance.csv',new_data1,delimiter=",")
+    np.savetxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script14\inductance.csv',new_data1,delimiter=",")
 
-    data2 = np.loadtxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script1\coupling.csv', delimiter=",")
+    data2 = np.loadtxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script14\coupling.csv', delimiter=",")
     new_data2 = np.vstack((data2, temp2))
-    np.savetxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script1\coupling.csv',new_data2,delimiter=",")
+    np.savetxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script14\coupling.csv',new_data2,delimiter=",")
 
-    data3 = np.loadtxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script1\loss.csv', delimiter=",")
+    data3 = np.loadtxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script14\loss.csv', delimiter=",")
     new_data3 = np.vstack((data3, temp3))
-    np.savetxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script1\loss.csv',new_data3,delimiter=",")
+    np.savetxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script14\loss.csv',new_data3,delimiter=",")
 
 
 
@@ -205,14 +205,14 @@ for i in range(0, 10000):
 
     try :
         try:
-            os.remove(f'.\ML_aedt\ML1.aedt.lock')
+            os.remove(f'.\ML_aedt\ML14.aedt.lock')
         except:
             time.sleep(1)
-        if os.path.isfile(f'.\ML_aedt\ML1.aedt') :
-            os.remove(f'.\ML_aedt\ML1.aedt')
+        if os.path.isfile(f'.\ML_aedt\ML14.aedt') :
+            os.remove(f'.\ML_aedt\ML14.aedt')
         time.sleep(1)	
 
-        shutil.copy(f'.\ML_aedt\ML_ref.aedt',f'.\ML_aedt\ML1.aedt')
+        shutil.copy(f'.\ML_aedt\ML_ref.aedt',f'.\ML_aedt\ML14.aedt')
         time.sleep(1)
 
         try:
@@ -221,13 +221,13 @@ for i in range(0, 10000):
             print(f'error number {i}')
             print(e)
 
-        if os.path.isfile(f'.\ML_aedt\ML1.aedt') :
-            os.remove(f'.\ML_aedt\ML1.aedt')
+        if os.path.isfile(f'.\ML_aedt\ML14.aedt') :
+            os.remove(f'.\ML_aedt\ML14.aedt')
         time.sleep(1)	
 
-        shutil.rmtree(f'.\ML_aedt\ML1.aedtresults')
+        shutil.rmtree(f'.\ML_aedt\ML14.aedtresults')
         try:
-            os.remove(f'.\ML_aedt\ML1.aedt.lock')
+            os.remove(f'.\ML_aedt\ML14.aedt.lock')
         except:
             time.sleep(1)
     except :

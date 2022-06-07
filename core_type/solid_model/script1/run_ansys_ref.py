@@ -298,12 +298,12 @@ oEditor = oDesign.SetActiveEditor("3D Modeler")
 oEditor.CreateBox(
 	[
 		"NAME:BoxParameters",
-		"XPosition:="		, "-(w1+150mm)/2",
-		"YPosition:="		, "-(2*l1+l2+150mm)/2",
-		"ZPosition:="		, "-(2*l1+h1+100mm)/2",
-		"XSize:="		, "(w1+150mm)",
-		"YSize:="		, "(2*l1+l2+150mm)",
-		"ZSize:="		, "(2*l1+h1+100mm)"
+		"XPosition:="		, "-(air[0])/2",
+		"YPosition:="		, "-(air[1])/2",
+		"ZPosition:="		, "-(air[2])/2",
+		"XSize:="		, "(air[0])",
+		"YSize:="		, "(air[1])",
+		"ZSize:="		, "(air[2])"
 	], 
 	[
 		"NAME:Attributes",
@@ -403,7 +403,7 @@ oEditor.CreatePolyline(
 			"NAME:PolylinePoints",
 			[
 				"NAME:PLPoint",
-				"X:="			, "(w1+150mm)/2",
+				"X:="			, "(air[0])/2",
 				"Y:="			, "-l1/2-space[1]",
 				"Z:="			, "0mm"
 			],
@@ -667,7 +667,7 @@ oEditor.CreatePolyline(
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "(w1+150mm)/2",
+				"X:="			, "(air[0])/2",
 				"Y:="			, "-l1/2-space[1]",
 				"Z:="			, "-2/2*(coil_width[0]+move_z[0])"
 			]
@@ -878,7 +878,7 @@ oEditor.CreatePolyline(
 			"NAME:PolylinePoints",
 			[
 				"NAME:PLPoint",
-				"X:="			, "(w1+150mm)/2",
+				"X:="			, "(air[0])/2",
 				"Y:="			, "l1/2+space[3]",
 				"Z:="			, "0mm"
 			],
@@ -1142,7 +1142,7 @@ oEditor.CreatePolyline(
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "(w1+150mm)/2",
+				"X:="			, "(air[0])/2",
 				"Y:="			, "l1/2+space[3]",
 				"Z:="			, "-2/2*(coil_width[1]+move_z[1])"
 			]
@@ -1466,10 +1466,10 @@ oEditor.CreateRegularPolygon(
 	[
 		"NAME:RegularPolygonParameters",
 		"IsCovered:="		, True,
-		"XCenter:="		, "(w1+150mm)/2",
+		"XCenter:="		, "(air[0])/2",
 		"YCenter:="		, "-l1/2-space[1]",
 		"ZCenter:="		, "0mm",
-		"XStart:="		, "(w1+150mm)/2",
+		"XStart:="		, "(air[0])/2",
 		"YStart:="		, "-l1/2-space[1]-coil_width[0]/2",
 		"ZStart:="		, "0mm",
 		"NumSides:="		, "Num",
@@ -1511,10 +1511,10 @@ oEditor.CreateRegularPolygon(
 	[
 		"NAME:RegularPolygonParameters",
 		"IsCovered:="		, True,
-		"XCenter:="		, "(w1+150mm)/2",
+		"XCenter:="		, "(air[0])/2",
 		"YCenter:="		, "-l1/2-space[1]",
 		"ZCenter:="		, "0mm",
-		"XStart:="		, "(w1+150mm)/2",
+		"XStart:="		, "(air[0])/2",
 		"YStart:="		, "-l1/2-space[1]",
 		"ZStart:="		, "coil_width[0]/2",
 		"NumSides:="		, "Num",
@@ -1556,10 +1556,10 @@ oEditor.CreateRegularPolygon(
 	[
 		"NAME:RegularPolygonParameters",
 		"IsCovered:="		, True,
-		"XCenter:="		, "(w1+150mm)/2",
+		"XCenter:="		, "(air[0])/2",
 		"YCenter:="		, "l1/2+space[3]",
 		"ZCenter:="		, "0mm",
-		"XStart:="		, "(w1+150mm)/2",
+		"XStart:="		, "(air[0])/2",
 		"YStart:="		, "l1/2+space[3]+coil_width[1]/2",
 		"ZStart:="		, "0mm",
 		"NumSides:="		, "Num",
@@ -1601,10 +1601,10 @@ oEditor.CreateRegularPolygon(
 	[
 		"NAME:RegularPolygonParameters",
 		"IsCovered:="		, True,
-		"XCenter:="		, "(w1+150mm)/2",
+		"XCenter:="		, "(air[0])/2",
 		"YCenter:="		, "l1/2+space[3]",
 		"ZCenter:="		, "0mm",
-		"XStart:="		, "(w1+150mm)/2",
+		"XStart:="		, "(air[0])/2",
 		"YStart:="		, "l1/2+space[3]",
 		"ZStart:="		, "coil_width[1]/2",
 		"NumSides:="		, "Num",

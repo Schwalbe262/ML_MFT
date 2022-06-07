@@ -11,7 +11,7 @@ import pandas
 import os
 
 
-for k in range(1, 201): 
+for k in range(1, 31): 
 
 
     edited_lines = []

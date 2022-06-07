@@ -12,7 +12,7 @@ import os
 import shutil
 
 
-for k in range(2, 201): 
+for k in range(2, 31): 
 
 
     shutil.copytree("./script1", f'./script{k}')

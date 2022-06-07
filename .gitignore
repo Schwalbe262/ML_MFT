@@ -2,6 +2,6 @@
 
 
 # file
-*.csv
+Data*.csv
 *.pkl
 *.log

@@ -2,7 +2,7 @@ import ScriptEnv
 ScriptEnv.Initialize("Ansoft.ElectronicsDesktop")
 oDesktop.RestoreWindow()
 
-N1 = "$N1"
+N1 = $N1
 
 # Open aedt file
 #oDesktop.OpenProject("Z:/ANSYS_simulation/transformer/core_type_HFTR/HFTR_2022_05_31_solid_model/ML1.aedt")

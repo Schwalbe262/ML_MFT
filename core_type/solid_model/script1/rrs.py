@@ -69,12 +69,8 @@ def run_simul(version_idx_str):
     height = max(N1*coil_width1 + (N1-1)*move_z1 + 2*abs(offset_z1), N1*coil_width2 + (N1-1)*move_z2 + 2*abs(offset_z2))
     length = coil_width1 + coil_width2 + space2 + space4
 
-    if length<l2_range[0] : 
-        l2_range = [length,100,5,0]
-    elif length>l2_range[1] :
-        l2_range = [40,length,5,0]
-    else :
-        l2_range = [40, 100, 5, 0]
+    if length>l2_range[1] :
+        l2_range = [length,length*1.2,l2_range[2],l2_range[3]]
 
     #print(l2_range)
     
@@ -82,7 +78,7 @@ def run_simul(version_idx_str):
 
 
     if height>h1_range[1] :
-        h1_range = [h1_range[0],height*1.2,h1_range[2],h1_range[3]]
+        h1_range = [height+5,height*1.2,h1_range[2],h1_range[3]]
     
     h1 = random_choice(h1_range)
 

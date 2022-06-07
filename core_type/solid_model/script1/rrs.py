@@ -181,15 +181,15 @@ def run_simul(version_idx_str):
     print(temp3)
 
 
-    data1 = np.loadtxt(f'.\ML_data\magnetizing_inductance$VERSION_IDX_STR.csv', delimiter=",")
+    data1 = np.loadtxt(f'.\ML_data\magnetizing_inductance.csv', delimiter=",")
     new_data1 = np.vstack((data1, temp1))
     np.savetxt(f'.\ML_data\magnetizing_inductance.csv',new_data1,delimiter=",")
 
-    data2 = np.loadtxt(f'.\leakage_inductance$VERSION_IDX_STR.csv', delimiter=",")
+    data2 = np.loadtxt(f'.\leakage_inductance.csv', delimiter=",")
     new_data2 = np.vstack((data2, temp2))
     np.savetxt(f'.\ML_data\leakage_inductance.csv',new_data2,delimiter=",")
 
-    data3 = np.loadtxt(f'.\ML_data\loss$VERSION_IDX_STR.csv', delimiter=",")
+    data3 = np.loadtxt(f'.\ML_data\loss.csv', delimiter=",")
     new_data3 = np.vstack((data3, temp3))
     np.savetxt(f'.\ML_data\loss.csv',new_data3,delimiter=",")
 

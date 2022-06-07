@@ -99,9 +99,9 @@ def run_simul(version_idx_str):
     #0.5 Config Identifier-Variable set.
     config = {
         "$VERSION_IDX_STR"  :   version_idx_str,
-        "$airx"  :  airx,
-        "$airy"  :  airy,
-        "$airz"  :  airz,
+        "$air_x"  :  airx,
+        "$air_y"  :  airy,
+        "$air_z"  :  airz,
         "$N1"  :  N1,
         "$w1"  :  w1,
         "$l1"  :  l1,

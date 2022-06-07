@@ -6,7 +6,7 @@ N1 = "$N1"
 
 # Open aedt file
 #oDesktop.OpenProject("Z:/ANSYS_simulation/transformer/core_type_HFTR/HFTR_2022_05_31_solid_model/ML1.aedt")
-oDesktop.OpenProject("Y:/git/ML_WPT_coil/ML_MFT/core_type/solid_model/script1/ML_aedt/ML1.aedt")
+oDesktop.OpenProject("Y:/git/ML_MFT/core_type/solid_model/script1/ML_aedt/ML1.aedt")
 
 
 # Make project

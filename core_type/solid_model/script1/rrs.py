@@ -88,7 +88,7 @@ def run_simul(version_idx_str):
 
 
     airx = 1.2 * (w1 + 2*(max(space2+coil_width1,space4+coil_width2)))
-    airy = 1.2 * (length + 2*l1 + 2*(max(space1+coil_width1,space3+coil_width2)))
+    airy = 1.2 * (l2 + 2*l1 + 2*(max(space1+coil_width1,space3+coil_width2)))
     airz = 1.2 * (h1 + 2*l1)
 
 

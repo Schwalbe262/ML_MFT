@@ -40,8 +40,8 @@ def run_simul(version_idx_str):
     coil_width1_range = [2, 10, 0.5, 1] 
     coil_width2_range = [2, 10, 0.5, 1] 
 
-    move_z1_range = [1,10,0.5,1]
-    move_z2_range = [1,10,0.5,1]
+    move_z1_range = [0.5,5,0.5,1]
+    move_z2_range = [0.5,5,0.5,1]
 
     offset_z1_range = [-20,20,0.5,1]
     offset_z2_range = [-20,20,0.5,1]
@@ -183,13 +183,13 @@ def run_simul(version_idx_str):
     print(temp3)
 
 
-    data1 = np.loadtxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script30\inductance.csv', delimiter=",")
+    data1 = np.loadtxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script30\magnetizing_inductance.csv', delimiter=",")
     new_data1 = np.vstack((data1, temp1))
-    np.savetxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script30\inductance.csv',new_data1,delimiter=",")
+    np.savetxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script30\magnetizing_inductance.csv',new_data1,delimiter=",")
 
-    data2 = np.loadtxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script30\coupling.csv', delimiter=",")
+    data2 = np.loadtxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script30\leakage_inductance.csv', delimiter=",")
     new_data2 = np.vstack((data2, temp2))
-    np.savetxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script30\coupling.csv',new_data2,delimiter=",")
+    np.savetxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script30\leakage_inductance.csv',new_data2,delimiter=",")
 
     data3 = np.loadtxt(f'Z:\Autosimul_data\MFT\core_type_solid\{COMPUTER_NAME}\script30\loss.csv', delimiter=",")
     new_data3 = np.vstack((data3, temp3))

@@ -1772,7 +1772,7 @@ oModule.CreateReport("leakage inductance", "EddyCurrent", "Data Table", "Setup1 
 	], 
 	[
 		"X Component:="		, "Freq",
-		"Y Component:="		, ["(1-Matrix1.CplCoef(Tx,Rx)^2) * Matrix1.L(Tx,Tx)", "(1-Matrix1.CplCoef(Tx,Rx)^2) * Matrix1.L(Rx,Rx)"]
+		"Y Component:="		, ["(1-Matrix1.CplCoef(Tx,Rx)^2) * Matrix1.L(Tx,Tx) * 1000", "(1-Matrix1.CplCoef(Tx,Rx)^2) * Matrix1.L(Rx,Rx) * 1000"]
 	])
 
 

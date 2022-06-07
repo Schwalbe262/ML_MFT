@@ -10,7 +10,7 @@ import math
 import pandas
 
 
-for k in range(1, 201): 
+for k in range(1, 31): 
 
     f = open(f'script{k}.bat', 'w')
     f.write(f'cd script{k}\n')

@@ -162,9 +162,9 @@ def run_simul(version_idx_str):
         time.sleep(1)
 
 
-    temp1 = pd.read_csv(f'.\ML_data\inductance{version_idx_str}.csv', sep=",")
+    temp1 = pd.read_csv(f'.\ML_data\magnetizing_inductance{version_idx_str}.csv', sep=",")
     temp1 = temp1.to_numpy()
-    temp2 = pd.read_csv(f'.\ML_data\coupling{version_idx_str}.csv', sep=",")
+    temp2 = pd.read_csv(f'.\ML_data\leakage_inductance{version_idx_str}.csv', sep=",")
     temp2 = temp2.to_numpy()
     temp3 = pd.read_csv(f'.\ML_data\loss{version_idx_str}.csv', sep=",")
     temp3 = temp3.to_numpy()

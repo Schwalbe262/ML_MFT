@@ -171,17 +171,17 @@ def run_simul(version_idx_str):
 
     temp1 = pd.read_csv(f'.\ML_data\magnetizing_inductance{version_idx_str}.csv', sep=",")
     if temp1.columns[1] == "Matrix1.CplCoef(Tx,Rx)^2 * Matrix1.L(Tx,Tx) [mH]" :
+        temp1 = temp1.to_numpy()
         temp1[:,1] = temp1[:,1]*1000
         temp1[:,2] = temp1[:,2]*1000
-        temp1 = temp1.to_numpy()
     else :
         temp1 = temp1.to_numpy()
     
     temp2 = pd.read_csv(f'.\ML_data\leakage_inductance{version_idx_str}.csv', sep=",")
     if temp2.columns[1] == "(1-Matrix1.CplCoef(Tx,Rx)^2) * Matrix1.L(Tx,Tx) [nH]]" :
+        temp2 = temp2.to_numpy()
         temp2[:,1] = temp2[:,1]/1000
         temp2[:,2] = temp2[:,2]/1000
-        temp2 = temp2.to_numpy()
     else :
         temp2 = temp2.to_numpy()
 

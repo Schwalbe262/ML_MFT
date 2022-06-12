@@ -1,0 +1,2 @@
+"Freq [kHz]","Matrix1.CplCoef(Tx,Rx)^2 * Matrix1.L(Tx,Tx) * 1000 [mH]","Matrix1.CplCoef(Tx,Rx)^2 * Matrix1.L(Rx,Rx) * 1000 [mH]"
+30,498.30506168438,499.26816725215

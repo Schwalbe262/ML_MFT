@@ -6,7 +6,7 @@ N1 = $N1
 
 # Open aedt file
 #oDesktop.OpenProject("Z:/ANSYS_simulation/transformer/core_type_HFTR/HFTR_2022_05_31_solid_model/ML1.aedt")
-oDesktop.OpenProject("Y:/git/ML_MFT/core_type/solid_model/script1/ML_aedt/ML1.aedt")
+oDesktop.OpenProject("Y:/git/ML_MFT/core_type/solid_model2/script1/ML_aedt/ML1.aedt")
 
 
 # Make project
@@ -1834,9 +1834,9 @@ oModule.CreateReport("copper loss", "Fields", "Data Table", "Setup1 : LastAdapti
 	])
 
 
-oModule.ExportToFile("magnetizing inductance", "Y:/git/ML_MFT/core_type/solid_model/script1/ML_data/magnetizing_inductance$VERSION_IDX_STR.csv", False)
-oModule.ExportToFile("leakage inductance", "Y:/git/ML_MFT/core_type/solid_model/script1/ML_data/leakage_inductance$VERSION_IDX_STR.csv", False)
-oModule.ExportToFile("copper loss", "Y:/git/ML_MFT/core_type/solid_model/script1/ML_data/loss$VERSION_IDX_STR.csv", False)
+oModule.ExportToFile("magnetizing inductance", "Y:/git/ML_MFT/core_type/solid_model2/script1/ML_data/magnetizing_inductance$VERSION_IDX_STR.csv", False)
+oModule.ExportToFile("leakage inductance", "Y:/git/ML_MFT/core_type/solid_model2/script1/ML_data/leakage_inductance$VERSION_IDX_STR.csv", False)
+oModule.ExportToFile("copper loss", "Y:/git/ML_MFT/core_type/solid_model2/script1/ML_data/loss$VERSION_IDX_STR.csv", False)
 
 
 

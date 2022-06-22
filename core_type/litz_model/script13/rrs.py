@@ -195,9 +195,12 @@ def run_simul(version_idx_str):
 
     temp3 = pd.read_csv(f'.\ML_data\litz_Tx_loss{version_idx_str}.csv', sep=",")
     temp3 = temp3.to_numpy()
+    temp3 = temp3[0][2:4]
 
     temp4 = pd.read_csv(f'.\ML_data\litz_Rx_loss{version_idx_str}.csv', sep=",")
     temp4 = temp4.to_numpy()
+    temp4 = temp4[0][2:4]
+
 
     parameter1 = np.array([N1,w1,l1,l2,h1,per,space1,space2,space3,space4,coil_width1,coil_width2,move_z1,move_z2,offset_z1,offset_z2])
     parameter2 = np.array([N1,w1,l1,l2,h1,per,space1,space2,space3,space4,coil_width1,coil_width2,strand1,strand2,move_z1,move_z2,offset_z1,offset_z2])
@@ -210,6 +213,7 @@ def run_simul(version_idx_str):
     print(temp1)
     print(temp2)
     print(temp3)
+    print(temp4)
 
 
     data1 = np.loadtxt(f'Z:\Autosimul_data\MFT\core_type_litz\{COMPUTER_NAME}\script13\magnetizing_inductance.csv', delimiter=",")

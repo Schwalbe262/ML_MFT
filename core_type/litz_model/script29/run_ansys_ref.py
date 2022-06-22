@@ -1868,7 +1868,7 @@ oModule.AssignWindingGroup(
 	[
 		"NAME:Tx",
 		"Type:="		, "Current",
-		"IsSolid:="		, True,
+		"IsSolid:="		, False,
 		"Current:="		, "100A",
 		"Resistance:="		, "0ohm",
 		"Inductance:="		, "0nH",
@@ -1897,7 +1897,7 @@ oModule.AssignWindingGroup(
 	[
 		"NAME:Rx",
 		"Type:="		, "Current",
-		"IsSolid:="		, True,
+		"IsSolid:="		, False,
 		"Current:="		, "0A",
 		"Resistance:="		, "0ohm",
 		"Inductance:="		, "0nH",
@@ -2019,13 +2019,19 @@ oModule.CreateReport("litz loss", "EddyCurrent", "Data Table", "Setup1 : LastAda
 oModule.ExportToFile("litz loss", "Y:/git/ML_MFT/core_type/litz_model/script29/ML_data/litz_Tx_loss$VERSION_IDX_STR.csv", False)
 
 
-
-
-oModule = oDesign.GetModule("ReportSetup")
-oModule.ExportToFile("litz loss", "Y:/git/ML_MFT/core_type/litz_model/script29/ML_data/litz_Rx_loss$VERSION_IDX_STR.csv", False)
-
-
-
+oModule = oDesign.GetModule("BoundarySetup")
+oModule.EditWindingGroup("Rx", 
+	[
+		"NAME:Rx",
+		"Type:="		, "Current",
+		"IsSolid:="		, False,
+		"Current:="		, "100A",
+		"Resistance:="		, "0ohm",
+		"Inductance:="		, "0nH",
+		"Voltage:="		, "0mV",
+		"ParallelBranchesNum:="	, "1",
+		"Phase:="		, "0deg"
+	])
 oModule.EditWindingGroup("Tx", 
 	[
 		"NAME:Tx",
@@ -2039,23 +2045,13 @@ oModule.EditWindingGroup("Tx",
 		"Phase:="		, "0deg"
 	])
 
-oModule.EditWindingGroup("Rx", 
-	[
-		"NAME:Tx",
-		"Type:="		, "Current",
-		"IsSolid:="		, False,
-		"Current:="		, "100A",
-		"Resistance:="		, "0ohm",
-		"Inductance:="		, "0nH",
-		"Voltage:="		, "0mV",
-		"ParallelBranchesNum:="	, "1",
-		"Phase:="		, "0deg"
-	])
-
 
 oProject.Save()
 
 oDesign.Analyze("Setup1")
+
+oModule = oDesign.GetModule("ReportSetup")
+oModule.ExportToFile("litz loss", "Y:/git/ML_MFT/core_type/litz_model/script29/ML_data/litz_Rx_loss$VERSION_IDX_STR.csv", False)
 
 
 

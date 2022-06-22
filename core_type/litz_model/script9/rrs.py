@@ -39,8 +39,8 @@ def run_simul(version_idx_str):
     space3_range = [4, 50, 1, 0] 
     space4_range = [4, 50, 1, 0] 
 
-    coil_width1_range = [2, 10, 0.5, 1] 
-    coil_width2_range = [2, 10, 0.5, 1] 
+    coil_width1_range = [2, 10, 0.1, 1] 
+    coil_width2_range = [2, 10, 0.1, 1] 
 
     move_z1_range = [0.5,5,0.5,1]
     move_z2_range = [0.5,5,0.5,1]
@@ -66,7 +66,7 @@ def run_simul(version_idx_str):
     coil_width2 = random_choice(coil_width2_range)
 
     strand1 = round(coil_width1**2/0.1**2 * random_choice(strand1_range))
-    strand2 = round(coil_width1**2/0.1**2 * random_choice(strand2_range))
+    strand2 = round(coil_width2**2/0.1**2 * random_choice(strand2_range))
 
     per = random_choice(per_range)
 
@@ -78,7 +78,7 @@ def run_simul(version_idx_str):
     w1 = random_choice(w1_range)
     l1 = random_choice(l1_range)
 
-    height = max(N1*coil_width1 + (N1-1)*move_z1 + 2*abs(offset_z1), N1*coil_width2 + (N1-1)*move_z2 + 2*abs(offset_z2))
+    height = max((N1+1)*coil_width1 + (N1)*move_z1 + 2*abs(offset_z1), (N1+1)*coil_width2 + (N1)*move_z2 + 2*abs(offset_z2))
     length = coil_width1 + coil_width2 + space2 + space4
 
     if length>l2_range[0] and length<l2_range[1] :
@@ -92,9 +92,9 @@ def run_simul(version_idx_str):
 
 
     if height>h1_range[0] and height<h1_range[1] :
-        h1_range = [height+5,h1_range[1],h1_range[2],h1_range[3]]
+        h1_range = [height,h1_range[1],h1_range[2],h1_range[3]]
     if height>h1_range[0] and height>h1_range[1] :
-        h1_range = [height+5,height*1.2,h1_range[2],h1_range[3]]
+        h1_range = [height,height*1.2,h1_range[2],h1_range[3]]
     
     h1 = random_choice(h1_range)
 
@@ -194,27 +194,34 @@ def run_simul(version_idx_str):
         temp2 = temp2.to_numpy()
 
     temp3 = pd.read_csv(f'.\ML_data\litz_Tx_loss{version_idx_str}.csv', sep=",")
-    temp3 = temp3.to_numpy()
-    temp3 = temp3[0][2:4]
+    if temp3.columns[1] == "StrandedLoss [kW]" :
+        temp3 = temp3.to_numpy()
+        temp3 = temp3[0][1:3] * 1000
+    else : 
+        temp3 = temp3.to_numpy()
+        temp3 = temp3[0][1:3]
 
     temp4 = pd.read_csv(f'.\ML_data\litz_Rx_loss{version_idx_str}.csv', sep=",")
-    temp4 = temp4.to_numpy()
-    temp4 = temp4[0][2:4]
+    if temp4.columns[1] == "StrandedLoss [kW]" :
+        temp4 = temp4.to_numpy()
+        temp4 = temp4[0][1:3] * 1000
+    else : 
+        temp4 = temp4.to_numpy()
+        temp4 = temp4[0][1:3]
 
 
-    parameter1 = np.array([N1,w1,l1,l2,h1,per,space1,space2,space3,space4,coil_width1,coil_width2,move_z1,move_z2,offset_z1,offset_z2])
-    parameter2 = np.array([N1,w1,l1,l2,h1,per,space1,space2,space3,space4,coil_width1,coil_width2,strand1,strand2,move_z1,move_z2,offset_z1,offset_z2])
+    parameter1 = np.array([N1,w1,l1,l2,h1,per,space1,space2,space3,space4,coil_width1,coil_width2,move_z1,move_z2,offset_z1,offset_z2]) # 16 input
+    parameter2 = np.array([N1,w1,l1,l2,h1,per,space1,space2,space3,space4,coil_width1,coil_width2,strand1,strand2,move_z1,move_z2,offset_z1,offset_z2]) # 18 input
 
     temp1 = np.append(parameter1,temp1)
     temp2 = np.append(parameter1,temp2)
-    temp3 = np.append(parameter2,temp3,temp4)
+    temp3 = np.append(parameter2,temp3)
+    temp3 = np.append(temp3,temp4)
 
 
     print(temp1)
     print(temp2)
     print(temp3)
-    print(temp4)
-
 
     data1 = np.loadtxt(f'Z:\Autosimul_data\MFT\core_type_litz\{COMPUTER_NAME}\script9\magnetizing_inductance.csv', delimiter=",")
     new_data1 = np.vstack((data1, temp1))

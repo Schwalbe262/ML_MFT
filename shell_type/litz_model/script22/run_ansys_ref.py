@@ -2032,6 +2032,7 @@ oModule.CreateReport("leakage inductance", "EddyCurrent", "Data Table", "Setup1 
 oModule = oDesign.GetModule("FieldsReporter")
 
 
+oModule = oDesign.GetModule("ReportSetup")
 oModule.ExportToFile("magnetizing inductance", "Y:/git/ML_MFT/shell_type/litz_model/script22/ML_data/magnetizing_inductance$VERSION_IDX_STR.csv", False)
 oModule.ExportToFile("leakage inductance", "Y:/git/ML_MFT/shell_type/litz_model/script22/ML_data/leakage_inductance$VERSION_IDX_STR.csv", False)
 

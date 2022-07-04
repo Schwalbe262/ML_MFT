@@ -223,17 +223,17 @@ def run_simul(version_idx_str):
     print(temp2)
     print(temp3)
 
-    data1 = np.loadtxt(f'Z:\Autosimul_data\MFT\core_type_litz\{COMPUTER_NAME}\script26\magnetizing_inductance.csv', delimiter=",")
+    data1 = np.loadtxt(f'Z:\Autosimul_data\MFT\shell_type_litz\{COMPUTER_NAME}\script26\magnetizing_inductance.csv', delimiter=",")
     new_data1 = np.vstack((data1, temp1))
-    np.savetxt(f'Z:\Autosimul_data\MFT\core_type_litz\{COMPUTER_NAME}\script26\magnetizing_inductance.csv',new_data1,delimiter=",")
+    np.savetxt(f'Z:\Autosimul_data\MFT\shell_type_litz\{COMPUTER_NAME}\script26\magnetizing_inductance.csv',new_data1,delimiter=",")
 
-    data2 = np.loadtxt(f'Z:\Autosimul_data\MFT\core_type_litz\{COMPUTER_NAME}\script26\leakage_inductance.csv', delimiter=",")
+    data2 = np.loadtxt(f'Z:\Autosimul_data\MFT\shell_type_litz\{COMPUTER_NAME}\script26\leakage_inductance.csv', delimiter=",")
     new_data2 = np.vstack((data2, temp2))
-    np.savetxt(f'Z:\Autosimul_data\MFT\core_type_litz\{COMPUTER_NAME}\script26\leakage_inductance.csv',new_data2,delimiter=",")
+    np.savetxt(f'Z:\Autosimul_data\MFT\shell_type_litz\{COMPUTER_NAME}\script26\leakage_inductance.csv',new_data2,delimiter=",")
 
-    data3 = np.loadtxt(f'Z:\Autosimul_data\MFT\core_type_litz\{COMPUTER_NAME}\script26\loss.csv', delimiter=",")
+    data3 = np.loadtxt(f'Z:\Autosimul_data\MFT\shell_type_litz\{COMPUTER_NAME}\script26\loss.csv', delimiter=",")
     new_data3 = np.vstack((data3, temp3))
-    np.savetxt(f'Z:\Autosimul_data\MFT\core_type_litz\{COMPUTER_NAME}\script26\loss.csv',new_data3,delimiter=",")
+    np.savetxt(f'Z:\Autosimul_data\MFT\shell_type_litz\{COMPUTER_NAME}\script26\loss.csv',new_data3,delimiter=",")
 
 
 

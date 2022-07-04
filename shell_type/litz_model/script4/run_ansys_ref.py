@@ -2030,35 +2030,10 @@ oModule.CreateReport("leakage inductance", "EddyCurrent", "Data Table", "Setup1 
 
 
 oModule = oDesign.GetModule("FieldsReporter")
-oModule.EnterQty("OhmicLoss")
-oModule.EnterVol("Tx_in")
-oModule.CalcOp("Integrate")
-oModule.AddNamedExpression("Tx_loss", "Fields")
-oModule.EnterQty("OhmicLoss")
-oModule.EnterVol("Rx_in")
-oModule.CalcOp("Integrate")
-oModule.AddNamedExpression("Rx_loss", "Fields")
-oModule = oDesign.GetModule("ReportSetup")
-oModule.CreateReport("copper loss", "Fields", "Data Table", "Setup1 : LastAdaptive", [], 
-	[
-		"Freq:="		, ["All"],
-		"Phase:="		, ["0deg"],
-		"w1:="			, ["Nominal"],
-		"l1:="			, ["Nominal"],
-		"l2:="			, ["Nominal"],
-		"h1:="			, ["Nominal"],
-		"Num:="			, ["Nominal"],
-		"N1:="			, ["Nominal"]
-	], 
-	[
-		"X Component:="		, "Freq",
-		"Y Component:="		, ["Tx_loss","Rx_loss"]
-	])
 
 
 oModule.ExportToFile("magnetizing inductance", "Y:/git/ML_MFT/shell_type/litz_model/script4/ML_data/magnetizing_inductance$VERSION_IDX_STR.csv", False)
 oModule.ExportToFile("leakage inductance", "Y:/git/ML_MFT/shell_type/litz_model/script4/ML_data/leakage_inductance$VERSION_IDX_STR.csv", False)
-oModule.ExportToFile("copper loss", "Y:/git/ML_MFT/shell_type/litz_model/script4/ML_data/loss$VERSION_IDX_STR.csv", False)
 
 oModule = oDesign.GetModule("ReportSetup")
 oModule.CreateReport("litz loss", "EddyCurrent", "Data Table", "Setup1 : LastAdaptive", [], 

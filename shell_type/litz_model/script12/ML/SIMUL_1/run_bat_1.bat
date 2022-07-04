@@ -1,0 +1,1 @@
+"C:\Program Files\AnsysEM\AnsysEM21.1\Win64\ansysedt.exe" -iconic -runscriptandexit ".\ML\SIMUL_1\run_ansys_1.py"

@@ -1,0 +1,105 @@
+$N1: !!python/object/apply:numpy.core.multiarray.scalar
+- &id002 !!python/object/apply:numpy.dtype
+  args:
+  - i4
+  - false
+  - true
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  CAAAAA==
+$VERSION_IDX_STR: 1
+$air_x: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - false
+  - true
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  AAAAAADAkUA=
+$air_y: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  AAAAAABIkUA=
+$air_z: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  AAAAAAC4ikA=
+$coil_width1: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  ZmZmZmZmHkA=
+$coil_width2: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  ZmZmZmZmEkA=
+$h1: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  AAAAAADAXkA=
+$l1: !!python/object/apply:numpy.core.multiarray.scalar
+- *id002
+- !!binary |
+  GAAAAA==
+$l2: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  AAAAAAAAVEA=
+$move_z1: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  AAAAAAAABEA=
+$move_z2: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  AAAAAAAA4D8=
+$offset_z1: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  AAAAAAAAAAA=
+$offset_z2: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  AAAAAAAAIMA=
+$per: !!python/object/apply:numpy.core.multiarray.scalar
+- *id002
+- !!binary |
+  IBwAAA==
+$space1: !!python/object/apply:numpy.core.multiarray.scalar
+- *id002
+- !!binary |
+  JgAAAA==
+$space2: !!python/object/apply:numpy.core.multiarray.scalar
+- *id002
+- !!binary |
+  DwAAAA==
+$space3: !!python/object/apply:numpy.core.multiarray.scalar
+- *id002
+- !!binary |
+  BQAAAA==
+$space4: !!python/object/apply:numpy.core.multiarray.scalar
+- *id002
+- !!binary |
+  KgAAAA==
+$strand_Rx: 846
+$strand_Tx: 2426
+$w1: !!python/object/apply:numpy.core.multiarray.scalar
+- *id002
+- !!binary |
+  PAAAAA==

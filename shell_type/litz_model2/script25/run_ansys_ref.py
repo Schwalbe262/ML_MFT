@@ -6,7 +6,7 @@ N1 = $N1
 
 # Open aedt file
 #oDesktop.OpenProject("Z:/ANSYS_simulation/transformer/core_type_HFTR/HFTR_2022_05_31_solid_model/ML25.aedt")
-oDesktop.OpenProject("Y:/git/ML_MFT/shell_type/litz_model/script25/ML_aedt/ML25.aedt")
+oDesktop.OpenProject("Y:/git/ML_MFT/shell_type/litz_model2/script25/ML_aedt/ML25.aedt")
 
 
 # Make project
@@ -2033,8 +2033,8 @@ oModule = oDesign.GetModule("FieldsReporter")
 
 
 oModule = oDesign.GetModule("ReportSetup")
-oModule.ExportToFile("magnetizing inductance", "Y:/git/ML_MFT/shell_type/litz_model/script25/ML_data/magnetizing_inductance$VERSION_IDX_STR.csv", False)
-oModule.ExportToFile("leakage inductance", "Y:/git/ML_MFT/shell_type/litz_model/script25/ML_data/leakage_inductance$VERSION_IDX_STR.csv", False)
+oModule.ExportToFile("magnetizing inductance", "Y:/git/ML_MFT/shell_type/litz_model2/script25/ML_data/magnetizing_inductance$VERSION_IDX_STR.csv", False)
+oModule.ExportToFile("leakage inductance", "Y:/git/ML_MFT/shell_type/litz_model2/script25/ML_data/leakage_inductance$VERSION_IDX_STR.csv", False)
 
 oModule = oDesign.GetModule("ReportSetup")
 oModule.CreateReport("litz loss", "EddyCurrent", "Data Table", "Setup1 : LastAdaptive", [], 
@@ -2052,7 +2052,7 @@ oModule.CreateReport("litz loss", "EddyCurrent", "Data Table", "Setup1 : LastAda
 		"Y Component:="		, ["StrandedLoss","StrandedLossAC"]
 	])
 
-oModule.ExportToFile("litz loss", "Y:/git/ML_MFT/shell_type/litz_model/script25/ML_data/litz_Tx_loss$VERSION_IDX_STR.csv", False)
+oModule.ExportToFile("litz loss", "Y:/git/ML_MFT/shell_type/litz_model2/script25/ML_data/litz_Tx_loss$VERSION_IDX_STR.csv", False)
 
 
 oModule = oDesign.GetModule("BoundarySetup")
@@ -2087,7 +2087,7 @@ oProject.Save()
 oDesign.Analyze("Setup1")
 
 oModule = oDesign.GetModule("ReportSetup")
-oModule.ExportToFile("litz loss", "Y:/git/ML_MFT/shell_type/litz_model/script25/ML_data/litz_Rx_loss$VERSION_IDX_STR.csv", False)
+oModule.ExportToFile("litz loss", "Y:/git/ML_MFT/shell_type/litz_model2/script25/ML_data/litz_Rx_loss$VERSION_IDX_STR.csv", False)
 
 
 

@@ -25,8 +25,8 @@ def random_choice(X) :
 def run_simul(version_idx_str):
     #0 Initialize random variables
 
-    N1_range = [2, 16, 1, 0]
-    N2_range = [2, 12, 1, 0]
+    N1_range = [2, 18, 1, 0]
+    N2_range = [2, 18, 1, 0]
 
     w1_range = [10, 80, 0.1, 1] # under, upper, resolution
     l1_range = [5, 15, 0.1, 1]
@@ -55,7 +55,7 @@ def run_simul(version_idx_str):
     # Design 1
 
     N1 = random_choice(N1_range)*1
-    N2 = random_choice(N2_range)*2
+    N2 = random_choice(N2_range)*1
     NX1 = N1/2
     NX2 = N2/2
 
@@ -80,7 +80,7 @@ def run_simul(version_idx_str):
     w1 = random_choice(w1_range)
     l1 = random_choice(l1_range)
 
-    height = max((N1+1)*coil_width1 + (N1)*move_z1 + 2*abs(offset_z1), (N2+1)/2*coil_width2 + (N2/2)*move_z2 + 2*abs(offset_z2))
+    height = max((N1+1)*coil_width1 + (N1)*move_z1 + 2*abs(offset_z1), (N2+1)*coil_width2 + (N2)*move_z2 + 2*abs(offset_z2))
     length = 1*coil_width1 + 2*coil_width2 + space2 + space4 + space6
 
     if length>l2_range[0] and length<l2_range[1] :

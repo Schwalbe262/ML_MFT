@@ -249,7 +249,7 @@ def run_simul(version_idx_str):
     new_data2 = np.vstack((data2, temp2))
     np.savetxt(f'Z:\Autosimul_data\MFT\FDC_2021_layer22\{COMPUTER_NAME}\script15\leakage_inductance.csv',new_data2,delimiter=",")
 
-    data3 = np.loadtxt(f'Z:\Autosimul_data\FDC_2021_layer22\{COMPUTER_NAME}\script15\loss.csv', delimiter=",")
+    data3 = np.loadtxt(f'Z:\Autosimul_data\MFT\FDC_2021_layer22\{COMPUTER_NAME}\script15\loss.csv', delimiter=",")
     new_data3 = np.vstack((data3, temp3))
     np.savetxt(f'Z:\Autosimul_data\MFT\FDC_2021_layer22\{COMPUTER_NAME}\script15\loss.csv',new_data3,delimiter=",")
 

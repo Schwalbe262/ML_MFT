@@ -1,7 +1,7 @@
 N1 = $N1
 N2 = $N2
-NX1 = $NX1
-NX2 = $NX2
+NX1 = N1/2
+NX2 = N2/2
 
 
 import ScriptEnv

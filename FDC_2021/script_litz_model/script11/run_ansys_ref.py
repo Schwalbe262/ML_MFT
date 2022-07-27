@@ -9,11 +9,11 @@ ScriptEnv.Initialize("Ansoft.ElectronicsDesktop")
 oDesktop.RestoreWindow()
 
 
-oDesktop.OpenProject("Y:/git/ML_MFT/FDC_2021/script_litz_model/script1/ML_aedt/ML1.aedt")
+oDesktop.OpenProject("Y:/git/ML_MFT/FDC_2021/script_litz_model/script11/ML_aedt/ML11.aedt")
 
 
 
-oProject = oDesktop.SetActiveProject("ML1")
+oProject = oDesktop.SetActiveProject("ML11")
 oProject.InsertDesign("Maxwell", "Maxwell_ML_v$VERSION_IDX_STR", "EddyCurrent", "")
 oDesign = oProject.SetActiveDesign("Maxwell_ML_v$VERSION_IDX_STR")
 
@@ -2892,9 +2892,9 @@ oModule.CreateReport("copper loss", "Fields", "Data Table", "Setup1 : LastAdapti
 
 
 oModule = oDesign.GetModule("ReportSetup")
-oModule.ExportToFile("magnetizing inductance", "Y:/git/ML_MFT/FDC_2021/script_litz_model/script1/ML_data/magnetizing_inductance$VERSION_IDX_STR.csv", False)
-oModule.ExportToFile("leakage inductance", "Y:/git/ML_MFT/FDC_2021/script_litz_model/script1/ML_data/leakage_inductance$VERSION_IDX_STR.csv", False)
-oModule.ExportToFile("copper loss", "Y:/git/ML_MFT/FDC_2021/script_litz_model/script1/ML_data/loss$VERSION_IDX_STR.csv", False)
+oModule.ExportToFile("magnetizing inductance", "Y:/git/ML_MFT/FDC_2021/script_litz_model/script11/ML_data/magnetizing_inductance$VERSION_IDX_STR.csv", False)
+oModule.ExportToFile("leakage inductance", "Y:/git/ML_MFT/FDC_2021/script_litz_model/script11/ML_data/leakage_inductance$VERSION_IDX_STR.csv", False)
+oModule.ExportToFile("copper loss", "Y:/git/ML_MFT/FDC_2021/script_litz_model/script11/ML_data/loss$VERSION_IDX_STR.csv", False)
 
 
 oDefinitionManager = oProject.GetDefinitionManager()

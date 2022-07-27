@@ -1,0 +1,74 @@
+$begin '$base_index$'
+  $begin 'properties'
+    all_levels=000000000000
+    time(year=000000002021, month=000000000008, day=000000000019, hour=000000000014, min=000000000051, sec=000000000013)
+    version=000000000000
+  $end 'properties'
+  $begin '$base_index$'
+    $index$(pos=000000001632, lin=000000000054, lvl=000000000000)
+  $end '$base_index$'
+$end '$base_index$'
+$begin 'SolutionBlock1'
+	SolutionName='AdaptivePass'
+	SolutionID=1
+	V=100
+	$begin 'States'
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies()
+		SolutionType=1
+		CenterFreq=0
+	$end 'Definition'
+$end 'SolutionBlock1'
+$begin 'BlockMapName'
+	FileHeader='SolutionBlock4'
+	'SolutionKey(SimSetup=0, Instance=\'SetupDefinition\', Solution=-1, VersionID=100)'='SolutionBlock3'
+	'SolutionKey(SimSetup=0, Instance=\'SolutionDefinition\', Solution=1, VersionID=100)'='SolutionBlock1'
+	'SolutionKey(SimSetup=0, Instance=\'SolutionDefinition\', Solution=2, VersionID=100)'='SolutionBlock2'
+$end 'BlockMapName'
+$begin 'SolutionBlock2'
+	SolutionName='LastAdaptive'
+	SolutionID=2
+	V=100
+	$begin 'States'
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies()
+		SolutionType=1
+		CenterFreq=0
+	$end 'Definition'
+$end 'SolutionBlock2'
+$begin 'SolutionBlock3'
+	SimSetupID=0
+	SimSetupName='Setup1'
+	VersionID=100
+	SolveSetupID=0
+	$begin 'MI'
+	$end 'MI'
+$end 'SolutionBlock3'
+$begin 'SolutionBlock4'
+	ProductName=''
+	CircuitName='Maxwell_ML_v2'
+	VersionID=100
+	PostProcess=false
+	LossLess=true
+	NextUniqueID=129
+	MoveBackwards=false
+	$begin 'LinkedDataList'
+	$end 'LinkedDataList'
+	$begin 'MI'
+	$end 'MI'
+$end 'SolutionBlock4'
+$begin '$index$'
+	$begin '$index$'
+		SolutionBlock1(pos=370, lin=1, lvl=0)
+		SolutionBlock2(pos=997, lin=20, lvl=0)
+		SolutionBlock3(pos=1243, lin=33, lvl=0)
+		SolutionBlock4(pos=1381, lin=41, lvl=0)
+		BlockMapName(pos=616, lin=14, lvl=0)
+		$base_index$(pos=0, lin=1, lvl=0)
+		$index$(pos=1632, lin=54, lvl=0)
+	$end '$index$'
+$end '$index$'

@@ -1,0 +1,1 @@
+2kW급 변압기 parameter range 줄인 모델

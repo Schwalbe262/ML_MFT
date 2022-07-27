@@ -1117,19 +1117,19 @@ oEditor.CreatePolyline(
 			[
 				"NAME:PLPoint",
 				"X:="			, "air[0]/2",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "l1+h1/2+5mm"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+coil_width[0]+coil_width[1]/2+space[0]+space[2]",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "l1+h1/2+5mm"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+coil_width[0]+coil_width[1]/2+space[0]+space[2]",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "h1/2"
 			]
 		],
@@ -1152,7 +1152,7 @@ oEditor.CreatePolyline(
 			"NAME:PolylineXSection",
 			"XSectionType:="	, "Circle",
 			"XSectionOrient:="	, "Auto",
-			"XSectionWidth:="	, "coil_width[0]",
+			"XSectionWidth:="	, "coil_width[1]",
 			"XSectionTopWidth:="	, "0mm",
 			"XSectionHeight:="	, "0mm",
 			"XSectionNumSegments:="	, "Num",
@@ -1163,7 +1163,7 @@ oEditor.CreatePolyline(
 		"NAME:Attributes",
 		"Name:="		, "Rx_in",
 		"Flags:="		, "",
-		"Color:="		, "(255 0 0)",
+		"Color:="		, "(0 0 255)",
 		"Transparency:="	, 0,
 		"PartCoordinateSystem:=", "Global",
 		"UDMIZ:="		, "",
@@ -1187,30 +1187,30 @@ oEditor.CreatePolyline(
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+coil_width[0]+coil_width[1]/2+space[0]+space[2]",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "l1+h1/2-offset_z[1]-(N2/2)*(coil_width[0]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+coil_width[0]+coil_width[1]/2+space[0]+space[2]",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "-0/2*(coil_width[0]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+coil_width[0]+coil_width[1]/2",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "-0/2*(coil_width[0]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "-w1/2-coil_width[0]-coil_width[1]/2/2-space[0]-space[2]",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"X:="			, "-w1/2-coil_width[0]-coil_width[1]/2-space[0]-space[2]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "-0/2*(coil_width[0]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "-w1/2-coil_width[0]-coil_width[1]/2/2-space[0]-space[2]",
+				"X:="			, "-w1/2-coil_width[0]-coil_width[1]/2-space[0]-space[2]",
 				"Y:="			, "l1+coil_width[0]+coil_width[1]/2+space[1]+space[3]",
 				"Z:="			, "-1/2*(coil_width[0]+move_z[1])"
 			],
@@ -1223,13 +1223,13 @@ oEditor.CreatePolyline(
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+coil_width[0]+coil_width[1]/2+space[0]+space[2]",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "-2/2*(coil_width[0]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+coil_width[0]+coil_width[1]/2",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "-2/2*(coil_width[0]+move_z[1])"
 			]	
 		],
@@ -1282,7 +1282,7 @@ oEditor.CreatePolyline(
 			"NAME:PolylineXSection",
 			"XSectionType:="	, "Circle",
 			"XSectionOrient:="	, "Auto",
-			"XSectionWidth:="	, "coil_width[0]",
+			"XSectionWidth:="	, "coil_width[1]",
 			"XSectionTopWidth:="	, "0mm",
 			"XSectionHeight:="	, "0mm",
 			"XSectionNumSegments:="	, "Num",
@@ -1293,7 +1293,7 @@ oEditor.CreatePolyline(
 		"NAME:Attributes",
 		"Name:="		, "Rx1",
 		"Flags:="		, "",
-		"Color:="		, "(255 0 0)",
+		"Color:="		, "(0 0 255)",
 		"Transparency:="	, 0,
 		"PartCoordinateSystem:=", "Global",
 		"UDMIZ:="		, "",
@@ -1318,24 +1318,24 @@ if N2>2 :
 				[
 					"NAME:PLPoint",
 					"X:="			, "w1/2+coil_width[0]+coil_width[1]/2+space[0]+space[2]",
-					"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+					"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 					"Z:="			, "-0/2*(coil_width[0]+move_z[1])"
 				],
 				[
 					"NAME:PLPoint",
 					"X:="			, "w1/2+coil_width[0]+coil_width[1]/2",
-					"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+					"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 					"Z:="			, "-0/2*(coil_width[0]+move_z[1])"
 				],
 				[
 					"NAME:PLPoint",
-					"X:="			, "-w1/2-coil_width[0]-coil_width[1]/2/2-space[0]-space[2]",
-					"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+					"X:="			, "-w1/2-coil_width[0]-coil_width[1]/2-space[0]-space[2]",
+					"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 					"Z:="			, "-0/2*(coil_width[0]+move_z[1])"
 				],
 				[
 					"NAME:PLPoint",
-					"X:="			, "-w1/2-coil_width[0]-coil_width[1]/2/2-space[0]-space[2]",
+					"X:="			, "-w1/2-coil_width[0]-coil_width[1]/2-space[0]-space[2]",
 					"Y:="			, "l1+coil_width[0]+coil_width[1]/2+space[1]+space[3]",
 					"Z:="			, "-1/2*(coil_width[0]+move_z[1])"
 				],
@@ -1348,13 +1348,13 @@ if N2>2 :
 				[
 					"NAME:PLPoint",
 					"X:="			, "w1/2+coil_width[0]+coil_width[1]/2+space[0]+space[2]",
-					"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+					"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 					"Z:="			, "-2/2*(coil_width[0]+move_z[1])"
 				],
 				[
 					"NAME:PLPoint",
 					"X:="			, "w1/2+coil_width[0]+coil_width[1]/2",
-					"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+					"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 					"Z:="			, "-2/2*(coil_width[0]+move_z[1])"
 				]	
 				
@@ -1402,7 +1402,7 @@ if N2>2 :
 				"NAME:PolylineXSection",
 				"XSectionType:="	, "Circle",
 				"XSectionOrient:="	, "Auto",
-				"XSectionWidth:="	, "coil_width[0]",
+				"XSectionWidth:="	, "coil_width[1]",
 				"XSectionTopWidth:="	, "0mm",
 				"XSectionHeight:="	, "0mm",
 				"XSectionNumSegments:="	, "Num",
@@ -1413,7 +1413,7 @@ if N2>2 :
 			"NAME:Attributes",
 			"Name:="		, "Rx2",
 			"Flags:="		, "",
-			"Color:="		, "(255 0 0)",
+			"Color:="		, "(0 0 255)",
 			"Transparency:="	, 0,
 			"PartCoordinateSystem:=", "Global",
 			"UDMIZ:="		, "",
@@ -1481,24 +1481,24 @@ oEditor.CreatePolyline(
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+coil_width[0]+coil_width[1]/2+space[0]+space[2]",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "-0/2*(coil_width[0]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+coil_width[0]+coil_width[1]/2",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "-0/2*(coil_width[0]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "-w1/2-coil_width[0]-coil_width[1]/2/2-space[0]-space[2]",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"X:="			, "-w1/2-coil_width[0]-coil_width[1]/2-space[0]-space[2]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "-0/2*(coil_width[0]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "-w1/2-coil_width[0]-coil_width[1]/2/2-space[0]-space[2]",
+				"X:="			, "-w1/2-coil_width[0]-coil_width[1]/2-space[0]-space[2]",
 				"Y:="			, "l1+coil_width[0]+coil_width[1]/2+space[1]+space[3]",
 				"Z:="			, "-1/2*(coil_width[0]+move_z[1])"
 			],
@@ -1511,13 +1511,13 @@ oEditor.CreatePolyline(
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+coil_width[0]+coil_width[1]/2+space[0]+space[2]",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "-2/2*(coil_width[0]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+coil_width[0]+coil_width[1]/2+space[0]+space[2]",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "-l1-h1/2-offset_z[1]-(N2/2)*coil_width[0]-(N2/2)*move_z[1]+(N2-1)*(coil_width[0]+move_z[1])"
 			]	
 			
@@ -1565,7 +1565,7 @@ oEditor.CreatePolyline(
 			"NAME:PolylineXSection",
 			"XSectionType:="	, "Circle",
 			"XSectionOrient:="	, "Auto",
-			"XSectionWidth:="	, "coil_width[0]",
+			"XSectionWidth:="	, "coil_width[1]",
 			"XSectionTopWidth:="	, "0mm",
 			"XSectionHeight:="	, "0mm",
 			"XSectionNumSegments:="	, "Num",
@@ -1576,7 +1576,7 @@ oEditor.CreatePolyline(
 		"NAME:Attributes",
 		"Name:="		, name_temp,
 		"Flags:="		, "",
-		"Color:="		, "(255 0 0)",
+		"Color:="		, "(0 0 255)",
 		"Transparency:="	, 0,
 		"PartCoordinateSystem:=", "Global",
 		"UDMIZ:="		, "",
@@ -1615,19 +1615,19 @@ oEditor.CreatePolyline(
 			[
 				"NAME:PLPoint",
 				"X:="			, "air[0]/2",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "-l1-h1/2-5mm"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+coil_width[0]+coil_width[1]/2+space[0]+space[2]",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "-l1-h1/2-5mm"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+coil_width[0]+coil_width[1]/2+space[0]+space[2]",
-				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2/2-space[1]-space[3]",
+				"Y:="			, "-l1-coil_width[0]-coil_width[1]/2-space[1]-space[3]",
 				"Z:="			, "h1/2"
 			]
 		],
@@ -1650,7 +1650,7 @@ oEditor.CreatePolyline(
 			"NAME:PolylineXSection",
 			"XSectionType:="	, "Circle",
 			"XSectionOrient:="	, "Auto",
-			"XSectionWidth:="	, "coil_width[0]",
+			"XSectionWidth:="	, "coil_width[1]",
 			"XSectionTopWidth:="	, "0mm",
 			"XSectionHeight:="	, "0mm",
 			"XSectionNumSegments:="	, "Num",
@@ -1661,7 +1661,7 @@ oEditor.CreatePolyline(
 		"NAME:Attributes",
 		"Name:="		, "Rx_out",
 		"Flags:="		, "",
-		"Color:="		, "(255 0 0)",
+		"Color:="		, "(0 0 255)",
 		"Transparency:="	, 0,
 		"PartCoordinateSystem:=", "Global",
 		"UDMIZ:="		, "",

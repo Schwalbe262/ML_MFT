@@ -900,7 +900,7 @@ oEditor.CreatePolyline(
 				"NAME:PLPoint",
 				"X:="			, "w1/2+coil_width[0]/2+space[0]",
 				"Y:="			, "-l1-coil_width[0]/2-space[1]",
-				"Z:="			, "-l1-h1/2-offset_z[0]-(N1/2)*coil_width[0]-(N1/2)*move_z[0]+11*(coil_width[0]+move_z[0])"
+				"Z:="			, "-l1-h1/2-offset_z[0]-(N1/2)*coil_width[0]-(N1/2)*move_z[0]+10*(coil_width[0]+move_z[0])"
 			]	
 			
 		],

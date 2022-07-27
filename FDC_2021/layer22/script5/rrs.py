@@ -28,7 +28,7 @@ def run_simul(version_idx_str):
     N1_range = [2, 12, 1, 0]
     N2_range = [2, 12, 1, 0]
 
-    w1_range = [10, 100, 0.1, 1] # under, upper, resolution
+    w1_range = [10, 80, 0.1, 1] # under, upper, resolution
     l1_range = [5, 15, 0.1, 1]
     l2_range = [5, 30, 0.1, 1]
     h1_range = [20, 80, 0.1, 1]
@@ -39,17 +39,17 @@ def run_simul(version_idx_str):
     space2_range = [1, 5, 0.1, 1] 
     space3_range = [1, 10, 0.1, 1] 
     space4_range = [1, 10, 0.1, 1] 
-    space5_range = [0.5, 5, 0.1, 1] 
-    space6_range = [0.5, 5, 0.1, 1] 
+    space5_range = [0.5, 3, 0.1, 1] 
+    space6_range = [0.5, 3, 0.1, 1] 
 
     coil_width1_range = [0.5, 3, 0.1, 1] 
     coil_width2_range = [0.5, 3, 0.1, 1] 
 
-    move_z1_range = [0.5,5,0.5,1]
-    move_z2_range = [0.5,5,0.5,1]
+    move_z1_range = [0.5,2,0.1,1]
+    move_z2_range = [0.5,2,0.1,1]
 
-    offset_z1_range = [-10,10,0.5,1]
-    offset_z2_range = [-10,10,0.5,1]
+    offset_z1_range = [-10,10,0.1,1]
+    offset_z2_range = [-10,10,0.1,1]
 
 
     # Design 1

@@ -797,43 +797,44 @@ if NX1>2 :
 
 
 # Tx inner copy
-for i in range(NX1-3) : 
+if NX1>2 :
+	for i in range(NX1-3) : 
 
-    selection = "Tx" + str(i+3)
-    z_vector = "-" + str(i+2) + "*(coil_width[0]+move_z[0])"
+		selection = "Tx" + str(i+3)
+		z_vector = "-" + str(i+2) + "*(coil_width[0]+move_z[0])"
 
-    oEditor.Copy(
-        [
-            "NAME:Selections",
-            "Selections:="		, "Tx2"
-        ])
-    oEditor.Paste()
+		oEditor.Copy(
+			[
+				"NAME:Selections",
+				"Selections:="		, "Tx2"
+			])
+		oEditor.Paste()
 
-    oEditor.Move(
-        [
-            "NAME:Selections",
-            "Selections:="		, selection,
-            "NewPartsModelFlag:="	, "Model"
-        ], 
-        [
-            "NAME:TranslateParameters",
-            "TranslateVectorX:="	, "0mm",
-            "TranslateVectorY:="	, "0mm",
-            "TranslateVectorZ:="	, z_vector
-        ])
+		oEditor.Move(
+			[
+				"NAME:Selections",
+				"Selections:="		, selection,
+				"NewPartsModelFlag:="	, "Model"
+			], 
+			[
+				"NAME:TranslateParameters",
+				"TranslateVectorX:="	, "0mm",
+				"TranslateVectorY:="	, "0mm",
+				"TranslateVectorZ:="	, z_vector
+			])
 
-oEditor.Move(
-        [
-            "NAME:Selections",
-            "Selections:="		, "Tx2",
-            "NewPartsModelFlag:="	, "Model"
-        ], 
-        [
-            "NAME:TranslateParameters",
-            "TranslateVectorX:="	, "0mm",
-            "TranslateVectorY:="	, "0mm",
-            "TranslateVectorZ:="	, "-1*(coil_width[0]+move_z[0])"
-        ])
+	oEditor.Move(
+			[
+				"NAME:Selections",
+				"Selections:="		, "Tx2",
+				"NewPartsModelFlag:="	, "Model"
+			], 
+			[
+				"NAME:TranslateParameters",
+				"TranslateVectorX:="	, "0mm",
+				"TranslateVectorY:="	, "0mm",
+				"TranslateVectorZ:="	, "-1*(coil_width[0]+move_z[0])"
+			])
 
 
 # Tx inner end
@@ -1237,43 +1238,44 @@ if NX1>2 :
 name_temp = "Tx" + str(NX1+2)
 move_temp = "-" + str(NX1-1) + "*(coil_width[0]+move_z[0])"	
 
-for i in range(NX1-3) : 
+if NX1>2 :
+	for i in range(NX1-3) : 
 
-    selection = "Tx" + str(NX1+i+3)
-    z_vector = "-" + str(NX1-2-i) + "*(coil_width[0]+move_z[0])"
+		selection = "Tx" + str(NX1+i+3)
+		z_vector = "-" + str(NX1-2-i) + "*(coil_width[0]+move_z[0])"
 
-    oEditor.Copy(
-        [
-            "NAME:Selections",
-            "Selections:="		, name_temp
-        ])
-    oEditor.Paste()
+		oEditor.Copy(
+			[
+				"NAME:Selections",
+				"Selections:="		, name_temp
+			])
+		oEditor.Paste()
 
-    oEditor.Move(
-        [
-            "NAME:Selections",
-            "Selections:="		, selection,
-            "NewPartsModelFlag:="	, "Model"
-        ], 
-        [
-            "NAME:TranslateParameters",
-            "TranslateVectorX:="	, "0mm",
-            "TranslateVectorY:="	, "0mm",
-            "TranslateVectorZ:="	, z_vector
-        ])
+		oEditor.Move(
+			[
+				"NAME:Selections",
+				"Selections:="		, selection,
+				"NewPartsModelFlag:="	, "Model"
+			], 
+			[
+				"NAME:TranslateParameters",
+				"TranslateVectorX:="	, "0mm",
+				"TranslateVectorY:="	, "0mm",
+				"TranslateVectorZ:="	, z_vector
+			])
 
-oEditor.Move(
-        [
-            "NAME:Selections",
-            "Selections:="		, name_temp,
-            "NewPartsModelFlag:="	, "Model"
-        ], 
-        [
-            "NAME:TranslateParameters",
-            "TranslateVectorX:="	, "0mm",
-            "TranslateVectorY:="	, "0mm",
-            "TranslateVectorZ:="	, move_temp
-        ])
+	oEditor.Move(
+			[
+				"NAME:Selections",
+				"Selections:="		, name_temp,
+				"NewPartsModelFlag:="	, "Model"
+			], 
+			[
+				"NAME:TranslateParameters",
+				"TranslateVectorX:="	, "0mm",
+				"TranslateVectorY:="	, "0mm",
+				"TranslateVectorZ:="	, move_temp
+			])
 
 
 # Tx outer end
@@ -1842,43 +1844,44 @@ if NX2>2 :
 
 
 # Rx inner copy
-for i in range(NX2-3) : 
+if NX2>2 :
+	for i in range(NX2-3) : 
 
-    selection = "Rx" + str(i+3)
-    z_vector = "-" + str(i+2) + "*(coil_width[1]+move_z[1])"
+		selection = "Rx" + str(i+3)
+		z_vector = "-" + str(i+2) + "*(coil_width[1]+move_z[1])"
 
-    oEditor.Copy(
-        [
-            "NAME:Selections",
-            "Selections:="		, "Rx2"
-        ])
-    oEditor.Paste()
+		oEditor.Copy(
+			[
+				"NAME:Selections",
+				"Selections:="		, "Rx2"
+			])
+		oEditor.Paste()
 
-    oEditor.Move(
-        [
-            "NAME:Selections",
-            "Selections:="		, selection,
-            "NewPartsModelFlag:="	, "Model"
-        ], 
-        [
-            "NAME:TranslateParameters",
-            "TranslateVectorX:="	, "0mm",
-            "TranslateVectorY:="	, "0mm",
-            "TranslateVectorZ:="	, z_vector
-        ])
+		oEditor.Move(
+			[
+				"NAME:Selections",
+				"Selections:="		, selection,
+				"NewPartsModelFlag:="	, "Model"
+			], 
+			[
+				"NAME:TranslateParameters",
+				"TranslateVectorX:="	, "0mm",
+				"TranslateVectorY:="	, "0mm",
+				"TranslateVectorZ:="	, z_vector
+			])
 
-oEditor.Move(
-        [
-            "NAME:Selections",
-            "Selections:="		, "Rx2",
-            "NewPartsModelFlag:="	, "Model"
-        ], 
-        [
-            "NAME:TranslateParameters",
-            "TranslateVectorX:="	, "0mm",
-            "TranslateVectorY:="	, "0mm",
-            "TranslateVectorZ:="	, "-1*(coil_width[1]+move_z[1])"
-        ])
+	oEditor.Move(
+			[
+				"NAME:Selections",
+				"Selections:="		, "Rx2",
+				"NewPartsModelFlag:="	, "Model"
+			], 
+			[
+				"NAME:TranslateParameters",
+				"TranslateVectorX:="	, "0mm",
+				"TranslateVectorY:="	, "0mm",
+				"TranslateVectorZ:="	, "-1*(coil_width[1]+move_z[1])"
+			])
 
 
 # Rx inner end
@@ -2281,44 +2284,44 @@ if NX2>2 :
 
 name_temp = "Rx" + str(NX2+2)
 move_temp = "-" + str(NX2-1) + "*(coil_width[1]+move_z[1])"	
+if NX2>2 :
+	for i in range(NX2-3) : 
 
-for i in range(NX2-3) : 
+		selection = "Rx" + str(NX2+i+3)
+		z_vector = "-" + str(NX2-2-i) + "*(coil_width[1]+move_z[1])"
 
-    selection = "Rx" + str(NX2+i+3)
-    z_vector = "-" + str(NX2-2-i) + "*(coil_width[1]+move_z[1])"
+		oEditor.Copy(
+			[
+				"NAME:Selections",
+				"Selections:="		, name_temp
+			])
+		oEditor.Paste()
 
-    oEditor.Copy(
-        [
-            "NAME:Selections",
-            "Selections:="		, name_temp
-        ])
-    oEditor.Paste()
+		oEditor.Move(
+			[
+				"NAME:Selections",
+				"Selections:="		, selection,
+				"NewPartsModelFlag:="	, "Model"
+			], 
+			[
+				"NAME:TranslateParameters",
+				"TranslateVectorX:="	, "0mm",
+				"TranslateVectorY:="	, "0mm",
+				"TranslateVectorZ:="	, z_vector
+			])
 
-    oEditor.Move(
-        [
-            "NAME:Selections",
-            "Selections:="		, selection,
-            "NewPartsModelFlag:="	, "Model"
-        ], 
-        [
-            "NAME:TranslateParameters",
-            "TranslateVectorX:="	, "0mm",
-            "TranslateVectorY:="	, "0mm",
-            "TranslateVectorZ:="	, z_vector
-        ])
-
-oEditor.Move(
-        [
-            "NAME:Selections",
-            "Selections:="		, name_temp,
-            "NewPartsModelFlag:="	, "Model"
-        ], 
-        [
-            "NAME:TranslateParameters",
-            "TranslateVectorX:="	, "0mm",
-            "TranslateVectorY:="	, "0mm",
-            "TranslateVectorZ:="	, move_temp
-        ])
+	oEditor.Move(
+			[
+				"NAME:Selections",
+				"Selections:="		, name_temp,
+				"NewPartsModelFlag:="	, "Model"
+			], 
+			[
+				"NAME:TranslateParameters",
+				"TranslateVectorX:="	, "0mm",
+				"TranslateVectorY:="	, "0mm",
+				"TranslateVectorZ:="	, move_temp
+			])
 
 
 # Rx outer end

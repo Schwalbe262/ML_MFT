@@ -2046,13 +2046,13 @@ oEditor.CreatePolyline(
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "-w1/2-2*coil_width[0]+3/2*coil_width[1]-space[0]-space[2]-space[4]-space[5]",
+				"X:="			, "-w1/2-2*coil_width[0]-3/2*coil_width[1]-space[0]-space[2]-space[4]-space[5]",
 				"Y:="			, "-l1-2*coil_width[0]-3/2*coil_width[1]-space[1]-space[2]-space[4]-space[5]",
 				"Z:="			, "0/2*(coil_width[1]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "-w1/2-2*coil_width[0]+3/2*coil_width[1]-space[0]-space[2]-space[4]-space[5]",
+				"X:="			, "-w1/2-2*coil_width[0]-3/2*coil_width[1]-space[0]-space[2]-space[4]-space[5]",
 				"Y:="			, "l1+2*coil_width[0]+3/2*coil_width[1]+space[1]+space[2]+space[4]+space[5]",
 				"Z:="			, "1/2*(coil_width[1]+move_z[1])"
 			],
@@ -2183,13 +2183,13 @@ if NX2>2 :
 				],
 				[
 					"NAME:PLPoint",
-					"X:="			, "-w1/2-2*coil_width[0]+3/2*coil_width[1]-space[0]-space[2]-space[4]-space[5]",
+					"X:="			, "-w1/2-2*coil_width[0]-3/2*coil_width[1]-space[0]-space[2]-space[4]-space[5]",
 					"Y:="			, "-l1-2*coil_width[0]-3/2*coil_width[1]-space[1]-space[2]-space[4]-space[5]",
 					"Z:="			, "0/2*(coil_width[1]+move_z[1])"
 				],
 				[
 					"NAME:PLPoint",
-					"X:="			, "-w1/2-2*coil_width[0]+3/2*coil_width[1]-space[0]-space[2]-space[4]-space[5]",
+					"X:="			, "-w1/2-2*coil_width[0]-3/2*coil_width[1]-space[0]-space[2]-space[4]-space[5]",
 					"Y:="			, "l1+2*coil_width[0]+3/2*coil_width[1]+space[1]+space[2]+space[4]+space[5]",
 					"Z:="			, "1/2*(coil_width[1]+move_z[1])"
 				],
@@ -2350,13 +2350,13 @@ oEditor.CreatePolyline(
 				],
 				[
 					"NAME:PLPoint",
-					"X:="			, "-w1/2-2*coil_width[0]+3/2*coil_width[1]-space[0]-space[2]-space[4]-space[5]",
+					"X:="			, "-w1/2-2*coil_width[0]-3/2*coil_width[1]-space[0]-space[2]-space[4]-space[5]",
 					"Y:="			, "-l1-2*coil_width[0]-3/2*coil_width[1]-space[1]-space[2]-space[4]-space[5]",
 					"Z:="			, "0/2*(coil_width[1]+move_z[1])"
 				],
 				[
 					"NAME:PLPoint",
-					"X:="			, "-w1/2-2*coil_width[0]+3/2*coil_width[1]-space[0]-space[2]-space[4]-space[5]",
+					"X:="			, "-w1/2-2*coil_width[0]-3/2*coil_width[1]-space[0]-space[2]-space[4]-space[5]",
 					"Y:="			, "l1+2*coil_width[0]+3/2*coil_width[1]+space[1]+space[2]+space[4]+space[5]",
 					"Z:="			, "1/2*(coil_width[1]+move_z[1])"
 				],

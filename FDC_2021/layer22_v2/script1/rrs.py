@@ -45,8 +45,8 @@ def run_simul(version_idx_str):
     coil_width1_range = [0.5, 3, 0.01, 2] 
     coil_width2_range = [0.5, 3, 0.01, 2] 
 
-    move_z1_range = [0.5,3,0.1,1]
-    move_z2_range = [0.5,3,0.1,1]
+    move_z1_range = [0.1,3,0.1,1]
+    move_z2_range = [0.1,3,0.1,1]
 
     offset_z1_range = [-15,15,0.1,1]
     offset_z2_range = [-15,15,0.1,1]
@@ -170,7 +170,7 @@ def run_simul(version_idx_str):
     #4 make batch file.
     filepath2 = os.path.join('ML',folder_name,f'run_bat_{version_idx_str}.bat')
     with open(f'.\\ML\\SIMUL_{version_idx_str}\\run_bat_{version_idx_str}.bat',"w") as f :
-        f.write(f'"C:\\Program Files\\AnsysEM\\AnsysEM21.1\\Win64\\ansysedt.exe" -iconic -runscript ".\\ML\SIMUL_{version_idx_str}\\run_ansys_{version_idx_str}.py"')
+        f.write(f'"C:\\Program Files\\AnsysEM\\AnsysEM21.1\\Win64\\ansysedt.exe" -iconic -runscriptandexit ".\\ML\SIMUL_{version_idx_str}\\run_ansys_{version_idx_str}.py"')
 
 
     workingDir = f'.\\ML\\SIMUL_{version_idx_str}'

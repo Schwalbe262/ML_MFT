@@ -987,7 +987,7 @@ oEditor.CreatePolyline(
 			"NAME:PolylinePoints",
 			[
 				"NAME:PLPoint",
-				"X:="			, "w1/2+coil_width[0]/2+space[1]",
+				"X:="			, "w1/2+coil_width[0]/2+space[1]/2",
 				"Y:="			, "-l1-3/2*coil_width[0]-space[1]-space[4]",
 				"Z:="			, "0/2*(coil_width[0]+move_z[0])"
 			],
@@ -2034,7 +2034,7 @@ oEditor.CreatePolyline(
 			"NAME:PolylinePoints",
 			[
 				"NAME:PLPoint",
-				"X:="			, "w1/2+2*coil_width[0]+1/2*coil_width[1]+space[1]+space[2]+space[4]",
+				"X:="			, "w1/2+2*coil_width[0]+1/2*coil_width[1]+space[1]/2+space[2]/2+space[4]",
 				"Y:="			, "-l1-2*coil_width[0]-3/2*coil_width[1]-space[1]-space[2]-space[4]-space[5]",
 				"Z:="			, "0/2*(coil_width[1]+move_z[1])"
 			],

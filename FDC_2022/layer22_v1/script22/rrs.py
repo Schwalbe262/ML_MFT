@@ -25,8 +25,8 @@ def random_choice(X) :
 def run_simul(version_idx_str):
     #0 Initialize random variables
 
-    N1_range = [2, 15, 1, 0]
-    N2_range = [2, 15, 1, 0]
+    N1_range = [2, 18, 1, 0]
+    N2_range = [2, 18, 1, 0]
 
     w1_range = [10, 80, 0.1, 1] # under, upper, resolution
     l1_range = [5, 20, 0.1, 1]

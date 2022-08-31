@@ -9,7 +9,7 @@ ScriptEnv.Initialize("Ansoft.ElectronicsDesktop")
 oDesktop.RestoreWindow()
 
 
-oDesktop.OpenProject("Y:/git/ML_MFT/FDC_2022/layer21_v1/script9/ML_aedt/ML9.aedt")
+oDesktop.OpenProject("Y:/git/ML_MFT/FDC_2022/layer22_v1/script9/ML_aedt/ML9.aedt")
 
 
 

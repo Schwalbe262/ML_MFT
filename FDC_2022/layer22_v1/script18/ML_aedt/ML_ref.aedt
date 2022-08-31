@@ -1,0 +1,304 @@
+$begin 'AnsoftProject'
+	Created='Sat Aug  7 21:16:50 2021'
+	Product='ElectronicsDesktop'
+	FileOwnedByWorkbench=false
+	$begin 'Desktop'
+		Version(2021, 1)
+		InfrastructureVersion(1, 0)
+		$begin 'FactoryHeader'
+		$end 'FactoryHeader'
+	$end 'Desktop'
+	UsesAdvancedFeatures=false
+	NextUniqueID=0
+	MoveBackwards=false
+	$begin 'HFSSEnvironment'
+		Version(1, 0)
+	$end 'HFSSEnvironment'
+	$begin 'PlanarEMEnvironment'
+		Version(1, 0)
+	$end 'PlanarEMEnvironment'
+	$begin 'Q3DEnvironment'
+		Version(1, 0)
+	$end 'Q3DEnvironment'
+	$begin '2DExtractorEnvironment'
+		Version(1, 0)
+	$end '2DExtractorEnvironment'
+	$begin 'NexximEnvironment'
+		Version(1, 0)
+	$end 'NexximEnvironment'
+	$begin 'NexximNetlistEnvironment'
+		Version(1, 0)
+	$end 'NexximNetlistEnvironment'
+	$begin 'EmitEnvironment'
+		Version(1, 0)
+	$end 'EmitEnvironment'
+	$begin 'Maxwell3DEnvironment'
+		Version(1, 0)
+	$end 'Maxwell3DEnvironment'
+	$begin 'Maxwell2DEnvironment'
+		Version(1, 0)
+	$end 'Maxwell2DEnvironment'
+	$begin 'RMxprtEnvironment'
+		Version(1, 0)
+	$end 'RMxprtEnvironment'
+	$begin 'MaxCirEnvironment'
+		Version(1, 0)
+	$end 'MaxCirEnvironment'
+	$begin 'SimplorerEnvironment'
+		Version(1, 0)
+	$end 'SimplorerEnvironment'
+	$begin 'IcepakEnvironment'
+		Version(1, 0)
+	$end 'IcepakEnvironment'
+	$begin 'MechanicalEnvironment'
+		Version(1, 0)
+	$end 'MechanicalEnvironment'
+	$begin 'FilterDesignEnvironment'
+	$end 'FilterDesignEnvironment'
+	$begin 'SchematicEnvironment'
+		Version(1, 0)
+	$end 'SchematicEnvironment'
+	$begin 'geometry3deditor'
+		Version(1, 0)
+	$end 'geometry3deditor'
+	ReadVersion=8
+	$begin 'DesignMgrEnvironment'
+		CompInstCounter=27
+		GPortCounter=0
+		NetCounter=0
+		Alias('Ieee;Simplorer Elements\\Ieee', 'Std;Simplorer Elements\\Std', 'Basic_VHDLAMS;Simplorer Elements\\Basic Elements VHDLAMS\\Basic Elements VHDLAMS', 'Digital_Elements;Simplorer Elements\\Digital Elements\\Digital Elements', 'Transformations;Simplorer Elements\\Tools\\Transformations\\Transformations', 'HEV_VHDLAMS;Simplorer Elements\\HEV VHDLAMS\\HEV VHDLAMS', 'automotive_vda;Simplorer Elements\\VDALibs VHDLAMS\\automotive_vda', 'example_boardnet;Simplorer Elements\\VDALibs VHDLAMS\\example_boardnet', 'example_ecar;Simplorer Elements\\VDALibs VHDLAMS\\example_ecar', 'fundamentals_vda;Simplorer Elements\\VDALibs VHDLAMS\\fundamentals_vda', 'hybrid_emc_vda;Simplorer Elements\\VDALibs VHDLAMS\\hybrid_emc_vda', 'megma;Simplorer Elements\\VDALibs VHDLAMS\\megma', 'modelica_rotational;Simplorer Elements\\VDALibs VHDLAMS\\modelica_rotational', 'modelica_thermal;Simplorer Elements\\VDALibs VHDLAMS\\modelica_thermal', 'modelica_translational;Simplorer Elements\\VDALibs VHDLAMS\\modelica_translational', 'spice2vhd;Simplorer Elements\\VDALibs VHDLAMS\\spice2vhd', 'spice2vhd_devices;Simplorer Elements\\VDALibs VHDLAMS\\spice2vhd_devices', 'aircraft_electrical_vhdlams;Simplorer Elements\\Aircraft Electrical VHDLAMS\\Aircraft Electrical VHDLAMS', 'power_system_vhdlams;Simplorer Elements\\Power System VHDLAMS\\Power System VHDLAMS')
+	$end 'DesignMgrEnvironment'
+	$begin 'ProjectDatasets'
+		NextUniqueID=0
+		MoveBackwards=false
+		DatasetType='ProjectDatasetType'
+		$begin 'DatasetDefinitions'
+		$end 'DatasetDefinitions'
+	$end 'ProjectDatasets'
+	VariableOrders[0:]
+	$begin 'Definitions'
+		$begin 'Folders'
+			Definitions(1604, 10000, 1, 1, 0, false, false)
+			Materials(1604, 9500, 9, 2, 1, false, false)
+			'Surface Materials'(1604, 9501, 33503, 3, 1, false, false)
+			Scripts(1604, 9502, 33500, 4, 1, false, false)
+			Padstacks(1604, 9003, 12, 105, 1, false, false)
+			Symbols(1604, 9001, 10, 103, 1, false, false)
+			Footprints(1604, 9002, 11, 104, 1, false, false)
+			Bondwires(1604, 9006, 12, 108, 1, false, false)
+			Components(1604, 9000, 8, 102, 1, false, false)
+			Models(1604, 9004, 13, 106, 1, false, false)
+			Packages(1604, 9005, 33502, 107, 1, false, false)
+		$end 'Folders'
+		$begin 'Materials'
+			$begin 'vacuum'
+				CoordinateSystemType='Cartesian'
+				BulkOrSurfaceType=1
+				$begin 'PhysicsTypes'
+					set('Electromagnetic')
+				$end 'PhysicsTypes'
+				$begin 'AttachedData'
+					$begin 'MatAppearanceData'
+						property_data='appearance_data'
+						Red=230
+						Green=230
+						Blue=230
+						Transparency=0.949999988079071
+					$end 'MatAppearanceData'
+				$end 'AttachedData'
+				permittivity='1'
+				ModTime=1499970477
+				Library='Materials'
+				LibLocation='SysLibrary'
+				ModSinceLib=false
+			$end 'vacuum'
+			$begin 'ferrite_LP3'
+				CoordinateSystemType='Cartesian'
+				BulkOrSurfaceType=1
+				$begin 'PhysicsTypes'
+					set('Electromagnetic', 'Thermal', 'Structural')
+				$end 'PhysicsTypes'
+				$begin 'AttachedData'
+					$begin 'MatAppearanceData'
+						property_data='appearance_data'
+						Red=89
+						Green=94
+						Blue=107
+					$end 'MatAppearanceData'
+				$end 'AttachedData'
+				$begin 'ModifierData'
+					$begin 'ThermalModifierData'
+						modifier_data='thermal_modifier_data'
+						$begin 'all_thermal_modifiers'
+						$end 'all_thermal_modifiers'
+					$end 'ThermalModifierData'
+				$end 'ModifierData'
+				permittivity='12'
+				permeability='1829'
+				conductivity='0.2'
+				dielectric_loss_tangent='0'
+				magnetic_loss_tangent='0.046'
+				$begin 'magnetic_coercivity'
+					property_type='VectorProperty'
+					Magnitude='12A_per_meter'
+					DirComp1='1'
+					DirComp2='0'
+					DirComp3='0'
+				$end 'magnetic_coercivity'
+				thermal_conductivity='4'
+				delta_H='0A_per_meter'
+				$begin 'core_loss_type'
+					property_type='ChoiceProperty'
+					Choice='Power Ferrite'
+				$end 'core_loss_type'
+				core_loss_cm='7.36'
+				core_loss_x='1.26'
+				core_loss_y='2.07'
+				core_loss_kdc='5'
+				mass_density='4800'
+				specific_heat='750'
+				youngs_modulus='119000000000'
+				thermal_expansion_coefficient='1e-05'
+				$begin 'magnetostriction'
+					property_type='CustomProperty'
+					PropertyModelType=0
+					Dir1ModelType=0
+					Dir2ModelType=0
+					IsoCoeff='0'
+					IsoHMax='0A_per_meter'
+					IsoHMin='0A_per_meter'
+					Dir1Coeff='0'
+					Dir1HMax='0A_per_meter'
+					Dir1HMin='0A_per_meter'
+					Dir1VecX='1'
+					Dir1VecY='0'
+					Dir1VecZ='0'
+					Dir2Coeff='0'
+					Dir2HMax='0A_per_meter'
+					Dir2HMin='0A_per_meter'
+					$begin 'Magnetostriction'
+						$begin 'Isotropic'
+							$begin 'OneVariation'
+								DatasetMapsName='Lambda-H curves versus Stress'
+							$end 'OneVariation'
+						$end 'Isotropic'
+						$begin 'Direction1'
+							$begin 'OneVariation'
+								DatasetMapsName='Lambda-H curves versus Stress'
+							$end 'OneVariation'
+						$end 'Direction1'
+						$begin 'Direction2'
+							$begin 'OneVariation'
+								DatasetMapsName='Lambda-H curves versus Stress'
+							$end 'OneVariation'
+						$end 'Direction2'
+						SelectedDatasetMapsName='Lambda-H curves versus Stress'
+					$end 'Magnetostriction'
+				$end 'magnetostriction'
+				$begin 'inverse_magnetostriction'
+					property_type='CustomProperty'
+					PropertyModelType=0
+					Dir1ModelType=0
+					IsoCoeff='0'
+					IsoSigmaMax='0megPascal'
+					IsoSigmaMin='0megPascal'
+					Dir1Coeff='0'
+					Dir1SigmaMax='0megPascal'
+					Dir1SigmaMin='0megPascal'
+					Dir1VecX='1'
+					Dir1VecY='0'
+					Dir1VecZ='0'
+					$begin 'Magnetostriction'
+						$begin 'Isotropic'
+							$begin 'OneVariation'
+								DatasetMapsName='B-H curves versus Stress'
+							$end 'OneVariation'
+							$begin 'OneVariation'
+								DatasetMapsName='B-Sigma curves versus H'
+							$end 'OneVariation'
+						$end 'Isotropic'
+						$begin 'Direction1'
+							$begin 'OneVariation'
+								DatasetMapsName='B-H curves versus Stress'
+							$end 'OneVariation'
+							$begin 'OneVariation'
+								DatasetMapsName='B-Sigma curves versus H'
+							$end 'OneVariation'
+						$end 'Direction1'
+						$begin 'Direction2'
+						$end 'Direction2'
+						SelectedDatasetMapsName='B-H curves versus Stress'
+					$end 'Magnetostriction'
+				$end 'inverse_magnetostriction'
+				core_loss_equiv_cut_depth='0.001meter'
+				ModTime=1628357401
+				Library=''
+				LibLocation='Project'
+				ModSinceLib=true
+			$end 'ferrite_LP3'
+			$begin 'copper'
+				CoordinateSystemType='Cartesian'
+				BulkOrSurfaceType=1
+				$begin 'PhysicsTypes'
+					set('Electromagnetic', 'Thermal', 'Structural')
+				$end 'PhysicsTypes'
+				$begin 'AttachedData'
+					$begin 'MatAppearanceData'
+						property_data='appearance_data'
+						Red=242
+						Green=140
+						Blue=102
+					$end 'MatAppearanceData'
+				$end 'AttachedData'
+				permeability='0.999991'
+				conductivity='58000000'
+				thermal_conductivity='400'
+				mass_density='8933'
+				specific_heat='385'
+				youngs_modulus='120000000000'
+				poissons_ratio='0.38'
+				thermal_expansion_coefficient='1.77e-05'
+				ModTime=1499970477
+				Library='Materials'
+				LibLocation='SysLibrary'
+				ModSinceLib=false
+			$end 'copper'
+		$end 'Materials'
+		$begin 'SurfaceMaterials'
+		$end 'SurfaceMaterials'
+		$begin 'Scripts'
+		$end 'Scripts'
+		$begin 'DefInfo'
+		$end 'DefInfo'
+		$begin 'Compdefs'
+		$end 'Compdefs'
+	$end 'Definitions'
+	DesignIDServer=54
+	MoveBackwards=false
+	$begin 'DataInstances'
+		DesignEditor='TopLevel'
+		Refdes('26', 'U1')
+		$begin 'CompInstances'
+		$end 'CompInstances'
+		$begin 'SODInfo'
+		$end 'SODInfo'
+	$end 'DataInstances'
+	$begin 'WBSystemIDToDesignInstanceIDMap'
+	$end 'WBSystemIDToDesignInstanceIDMap'
+	$begin 'WBSysIDSysDetails'
+	$end 'WBSysIDSysDetails'
+	$begin 'WBConnIDConnDetails'
+	$end 'WBConnIDConnDetails'
+	$begin 'WBMaterialGuidDetails'
+		WBMaterialGuidMap()
+	$end 'WBMaterialGuidDetails'
+	$begin 'MinervaProjectSettingsBlk'
+		MinervaRemoteFilePath=''
+		FolderContainerString=''
+	$end 'MinervaProjectSettingsBlk'
+$end 'AnsoftProject'
+$begin 'AllReferencedFilesForProject'
+$end 'AllReferencedFilesForProject'
+$begin 'ProjectPreview'
+	IsEncrypted=false
+$end 'ProjectPreview'

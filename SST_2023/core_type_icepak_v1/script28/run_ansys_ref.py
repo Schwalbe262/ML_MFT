@@ -6,12 +6,12 @@ N1 = $N1
 
 # ====================
 # Open aedt file
-#oDesktop.OpenProject("Z:/ANSYS_simulation/transformer/core_type_HFTR/HFTR_2022_05_31_solid_model/ML28.aedt")
-oDesktop.OpenProject("Y:/git/ML_MFT/SST_2023/core_type_icepak_v1/script28/ML_aedt/ML28.aedt")
+#oDesktop.OpenProject("Z:/ANSYS_simulation/transformer/core_type_HFTR/HFTR_2022_05_31_solid_model/ML1.aedt")
+oDesktop.OpenProject("Y:/git/ML_MFT/SST_2023/core_type_icepak_v1/script1/ML_aedt/ML1.aedt")
 
 
 # Make project
-oProject = oDesktop.SetActiveProject("ML28")
+oProject = oDesktop.SetActiveProject("ML1")
 oProject.InsertDesign("Icepak", "Icepak_ML_v$VERSION_IDX_STR", "TemperatureAndFlow", "")
 
 oDesign = oProject.SetActiveDesign("Icepak_ML_v$VERSION_IDX_STR")
@@ -2300,7 +2300,7 @@ oModule.CreateReport("Calculator Expressions Table 1", "Fields", "Data Table", "
 		"X Component:="		, "Num",
 		"Y Component:="		, ["LV_max_temp","LV_mean_temp","HV_max_temp","HV_mean_temp","core_max_temp","core_mean_temp"]
 	])
-oModule.ExportToFile("Calculator Expressions Table 1", "Y:/git/ML_MFT/SST_2023/core_type_icepak_v1/script28/ML_data/temp_data_$VERSION_IDX_STR.csv", False)
+oModule.ExportToFile("Calculator Expressions Table 1", "Y:/git/ML_MFT/SST_2023/core_type_icepak_v1/script1/ML_data/temp_data_$VERSION_IDX_STR.csv", False)
 
 
 

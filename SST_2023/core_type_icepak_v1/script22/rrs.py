@@ -42,8 +42,8 @@ def run_simul(version_idx_str):
     epoxy_thermal_coeff_range = [0.1, 2.0, 0.1, 1]
     bobin_thermal_coeff_range = [0.1, 2.0, 0.1, 1]
     core_thermal_coeff_range = [4, 200, 1, 0]
-    cold_x1_range = [0, 50, 1, 0]
-    cold_y1_range = [0, 50, 1, 0]
+    cold_x1_range = [0, 100, 1, 0]
+    cold_y1_range = [0, 60, 1, 0]
     cold_z1_range = [5, 30, 1, 0]
     N1_range = [2, 10, 1, 0]
 
@@ -102,8 +102,8 @@ def run_simul(version_idx_str):
     # ==============================
     # STEP 1-3 : 
 
-    cold_x2_range = [0, cold_x1, 1, 0]
-    cold_y2_range = [0, cold_y1, 1, 0]
+    cold_x2_range = [0, cold_x1/2, 1, 0]
+    cold_y2_range = [0, cold_y1/2, 1, 0]
     fillet_core_range = [0, l1, 1, 1]
     bobin_thick_range = [0, min(space3,space4), 0.1, 1]
 

@@ -42,8 +42,8 @@ def run_simul(version_idx_str):
     epoxy_thermal_coeff_range = [0.1, 2.0, 0.1, 1]
     bobin_thermal_coeff_range = [0.1, 2.0, 0.1, 1]
     core_thermal_coeff_range = [4, 200, 1, 0]
-    cold_x1_range = [0, 50, 1, 0]
-    cold_y1_range = [0, 50, 1, 0]
+    cold_x1_range = [0, 100, 1, 0]
+    cold_y1_range = [0, 60, 1, 0]
     cold_z1_range = [5, 30, 1, 0]
     N1_range = [2, 10, 1, 0]
 
@@ -102,8 +102,8 @@ def run_simul(version_idx_str):
     # ==============================
     # STEP 1-3 : 
 
-    cold_x2_range = [0, cold_x1, 1, 0]
-    cold_y2_range = [0, cold_y1, 1, 0]
+    cold_x2_range = [0, cold_x1/2, 1, 0]
+    cold_y2_range = [0, cold_y1/2, 1, 0]
     fillet_core_range = [0, l1, 1, 1]
     bobin_thick_range = [0, min(space3,space4), 0.1, 1]
 
@@ -264,9 +264,9 @@ def run_simul(version_idx_str):
     print(temp)
 
 
-    final_data = np.loadtxt(f'Z:\\Autosimul_data\\MFT\\SST_2023\\core_type_icepak_v1\\{COMPUTER_NAME}\\script28\\temp_data.csv', delimiter=",")
+    final_data = np.loadtxt(f'Z:\\Autosimul_data\\MFT\\SST_2023\\core_type_icepak_v1\\{COMPUTER_NAME}\\script1\\temp_data.csv', delimiter=",")
     new_data1 = np.vstack((final_data, temp))
-    np.savetxt(f'Z:\\Autosimul_data\\MFT\\SST_2023\\core_type_icepak_v1\\{COMPUTER_NAME}\\script28\\temp_data.csv',new_data1,delimiter=",")
+    np.savetxt(f'Z:\\Autosimul_data\\MFT\\SST_2023\\core_type_icepak_v1\\{COMPUTER_NAME}\\script1\\temp_data.csv',new_data1,delimiter=",")
 
 
 
@@ -279,14 +279,14 @@ for i in range(0, 10000):
 
     try :
         try:
-            os.remove(f'.\ML_aedt\ML28.aedt.lock')
+            os.remove(f'.\ML_aedt\ML1.aedt.lock')
         except:
             time.sleep(1)
-        if os.path.isfile(f'.\ML_aedt\ML28.aedt') :
-            os.remove(f'.\ML_aedt\ML28.aedt')
+        if os.path.isfile(f'.\ML_aedt\ML1.aedt') :
+            os.remove(f'.\ML_aedt\ML1.aedt')
         time.sleep(1)	
 
-        shutil.copy(f'.\ML_aedt\ML_ref.aedt',f'.\ML_aedt\ML28.aedt')
+        shutil.copy(f'.\ML_aedt\ML_ref.aedt',f'.\ML_aedt\ML1.aedt')
         time.sleep(1)
 
         try:
@@ -295,13 +295,13 @@ for i in range(0, 10000):
             print(f'error number {i}')
             print(e)
 
-        if os.path.isfile(f'.\ML_aedt\ML28.aedt') :
-            os.remove(f'.\ML_aedt\ML28.aedt')
+        if os.path.isfile(f'.\ML_aedt\ML1.aedt') :
+            os.remove(f'.\ML_aedt\ML1.aedt')
         time.sleep(1)	
 
-        shutil.rmtree(f'.\ML_aedt\ML28.aedtresults')
+        shutil.rmtree(f'.\ML_aedt\ML1.aedtresults')
         try:
-            os.remove(f'.\ML_aedt\ML28.aedt.lock')
+            os.remove(f'.\ML_aedt\ML1.aedt.lock')
         except:
             time.sleep(1)
     except :

@@ -863,49 +863,49 @@ oEditor.CreatePolyline(
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2 + 0.5*2*(coil_width[0]+space[0])",
-				"Y:="			, "-l1/2-space[1]",
+				"Y:="			, "-l1/2-space[1]-coil_width[0]/2",
 				"Z:="			, "0mm"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2",
-				"Y:="			, "-l1/2-space[1]",
+				"Y:="			, "-l1/2-space[1]-coil_width[0]/2",
 				"Z:="			, "0mm"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "-w1/2-space[0]",
-				"Y:="			, "-l1/2-space[1]",
+				"X:="			, "-w1/2-space[0]-coil_width[0]/2",
+				"Y:="			, "-l1/2-space[1]-coil_width[0]/2",
 				"Z:="			, "-1/2*(coil_width[0]+move_z[0])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "-w1/2-space[0]",
-				"Y:="			, "l1/2+space[1]",
+				"X:="			, "-w1/2-space[0]-coil_width[0]/2",
+				"Y:="			, "l1/2+space[1]+coil_width[0]/2",
 				"Z:="			, "-1/2*(coil_width[0]+move_z[0])"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "-w1/2",
-				"Y:="			, "l1/2+space[1]",
+				"Y:="			, "l1/2+space[1]+coil_width[0]/2",
 				"Z:="			, "-1/2*(coil_width[0]+move_z[0])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "w1/2+space[0]",
-				"Y:="			, "l1/2+space[1]",
+				"X:="			, "w1/2+space[0]+coil_width[0]/2",
+				"Y:="			, "l1/2+space[1]+coil_width[0]/2",
 				"Z:="			, "-2/2*(coil_width[0]+move_z[0])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "w1/2+space[0]",
-				"Y:="			, "-l1/2-space[1]",
+				"X:="			, "w1/2+space[0]+coil_width[0]/2",
+				"Y:="			, "-l1/2-space[1]-coil_width[0]/2",
 				"Z:="			, "-2/2*(coil_width[0]+move_z[0])"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+0.5*space[0]",
-				"Y:="			, "-l1/2-space[1]",
+				"Y:="			, "-l1/2-space[1]-coil_width[0]/2",
 				"Z:="			, "-2/2*(coil_width[0]+move_z[0])"
 			]
 		],
@@ -1005,43 +1005,43 @@ oEditor.CreatePolyline(
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+0.5*space[0]",
-				"Y:="			, "-l1/2-space[1]",
+				"Y:="			, "-l1/2-space[1]-coil_width[0]/2",
 				"Z:="			, "0mm"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2",
-				"Y:="			, "-l1/2-space[1]",
+				"Y:="			, "-l1/2-space[1]-coil_width[0]/2",
 				"Z:="			, "0mm"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "-w1/2-space[0]",
-				"Y:="			, "-l1/2-space[1]",
+				"X:="			, "-w1/2-space[0]-coil_width[0]/2",
+				"Y:="			, "-l1/2-space[1]-coil_width[0]/2",
 				"Z:="			, "-1/2*(coil_width[0]+move_z[0])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "-w1/2-space[0]",
-				"Y:="			, "l1/2+space[1]",
+				"X:="			, "-w1/2-space[0]-coil_width[0]/2",
+				"Y:="			, "l1/2+space[1]+coil_width[0]/2",
 				"Z:="			, "-1/2*(coil_width[0]+move_z[0])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "w1/2+space[0]",
-				"Y:="			, "l1/2+space[1]",
+				"X:="			, "w1/2+space[0]+coil_width[0]/2",
+				"Y:="			, "l1/2+space[1]+coil_width[0]/2",
 				"Z:="			, "-2/2*(coil_width[0]+move_z[0])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "w1/2+space[0]",
-				"Y:="			, "-l1/2-space[1]",
+				"X:="			, "w1/2+space[0]+coil_width[0]/2",
+				"Y:="			, "-l1/2-space[1]-coil_width[0]/2",
 				"Z:="			, "-2/2*(coil_width[0]+move_z[0])"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2 + 0.5*2*(coil_width[0]+space[0])",
-				"Y:="			, "-l1/2-space[1]",
+				"Y:="			, "-l1/2-space[1]-coil_width[0]/2",
 				"Z:="			, "-2/2*(coil_width[0]+move_z[0])"
 			]
 		],
@@ -1138,43 +1138,43 @@ if N1>2 :
 				[
 					"NAME:PLPoint",
 					"X:="			, "w1/2+0.5*space[0]",
-					"Y:="			, "-l1/2-space[1]",
+					"Y:="			, "-l1/2-space[1]-coil_width[0]/2",
 					"Z:="			, "0mm"
 				],
 				[
 					"NAME:PLPoint",
 					"X:="			, "w1/2",
-					"Y:="			, "-l1/2-space[1]",
+					"Y:="			, "-l1/2-space[1]-coil_width[0]/2",
 					"Z:="			, "0mm"
 				],
 				[
 					"NAME:PLPoint",
-					"X:="			, "-w1/2-space[0]",
-					"Y:="			, "-l1/2-space[1]",
+					"X:="			, "-w1/2-space[0]-coil_width[0]/2",
+					"Y:="			, "-l1/2-space[1]-coil_width[0]/2",
 					"Z:="			, "-1/2*(coil_width[0]+move_z[0])"
 				],
 				[
 					"NAME:PLPoint",
-					"X:="			, "-w1/2-space[0]",
-					"Y:="			, "l1/2+space[1]",
+					"X:="			, "-w1/2-space[0]-coil_width[0]/2",
+					"Y:="			, "l1/2+space[1]+coil_width[0]/2",
 					"Z:="			, "-1/2*(coil_width[0]+move_z[0])"
 				],
 				[
 					"NAME:PLPoint",
-					"X:="			, "w1/2+space[0]",
-					"Y:="			, "l1/2+space[1]",
+					"X:="			, "w1/2+space[0]+coil_width[0]/2",
+					"Y:="			, "l1/2+space[1]+coil_width[0]/2",
 					"Z:="			, "-2/2*(coil_width[0]+move_z[0])"
 				],
 				[
 					"NAME:PLPoint",
-					"X:="			, "w1/2+space[0]",
-					"Y:="			, "-l1/2-space[1]",
+					"X:="			, "w1/2+space[0]+coil_width[0]/2",
+					"Y:="			, "-l1/2-space[1]-coil_width[0]/2",
 					"Z:="			, "-2/2*(coil_width[0]+move_z[0])"
 				],
 				[
 					"NAME:PLPoint",
 					"X:="			, "w1/2+0.5*space[0]",
-					"Y:="			, "-l1/2-space[1]",
+					"Y:="			, "-l1/2-space[1]-coil_width[0]/2",
 					"Z:="			, "-2/2*(coil_width[0]+move_z[0])"
 				]
 			],
@@ -1273,49 +1273,49 @@ oEditor.CreatePolyline(
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2 + 0.5*2*(coil_width[1]+space[2])",
-				"Y:="			, "l1/2+space[3]",
+				"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 				"Z:="			, "0mm"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2",
-				"Y:="			, "l1/2+space[3]",
+				"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 				"Z:="			, "0mm"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "-w1/2-space[2]",
-				"Y:="			, "l1/2+space[3]",
+				"X:="			, "-w1/2-space[2]-coil_width[1]/2",
+				"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 				"Z:="			, "-1/2*(coil_width[1]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "-w1/2-space[2]",
-				"Y:="			, "-l1/2-space[3]",
+				"X:="			, "-w1/2-space[2]-coil_width[1]/2",
+				"Y:="			, "-l1/2-space[3]-coil_width[1]/2",
 				"Z:="			, "-1/2*(coil_width[1]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "-w1/2",
-				"Y:="			, "-l1/2-space[3]",
+				"Y:="			, "-l1/2-space[3]-coil_width[1]/2",
 				"Z:="			, "-1/2*(coil_width[1]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "w1/2+space[2]",
-				"Y:="			, "-l1/2-space[3]",
+				"X:="			, "w1/2+space[2]+coil_width[1]/2",
+				"Y:="			, "-l1/2-space[3]-coil_width[1]/2",
 				"Z:="			, "-2/2*(coil_width[1]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "w1/2+space[2]",
-				"Y:="			, "l1/2+space[3]",
+				"X:="			, "w1/2+space[2]+coil_width[1]/2",
+				"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 				"Z:="			, "-2/2*(coil_width[1]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+0.5*space[2]",
-				"Y:="			, "l1/2+space[3]",
+				"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 				"Z:="			, "-2/2*(coil_width[1]+move_z[1])"
 			]
 		],
@@ -1415,43 +1415,43 @@ oEditor.CreatePolyline(
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+0.5*space[2]",
-				"Y:="			, "l1/2+space[3]",
+				"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 				"Z:="			, "0mm"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2",
-				"Y:="			, "l1/2+space[3]",
+				"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 				"Z:="			, "0mm"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "-w1/2-space[2]",
-				"Y:="			, "l1/2+space[3]",
+				"X:="			, "-w1/2-space[2]-coil_width[1]/2",
+				"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 				"Z:="			, "-1/2*(coil_width[1]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "-w1/2-space[2]",
-				"Y:="			, "-l1/2-space[3]",
+				"X:="			, "-w1/2-space[2]-coil_width[1]/2",
+				"Y:="			, "-l1/2-space[3]-coil_width[1]/2",
 				"Z:="			, "-1/2*(coil_width[1]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "w1/2+space[2]",
-				"Y:="			, "-l1/2-space[3]",
+				"X:="			, "w1/2+space[2]+coil_width[1]/2",
+				"Y:="			, "-l1/2-space[3]-coil_width[1]/2",
 				"Z:="			, "-2/2*(coil_width[1]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
-				"X:="			, "w1/2+space[2]",
-				"Y:="			, "l1/2+space[3]",
+				"X:="			, "w1/2+space[2]+coil_width[1]/2",
+				"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 				"Z:="			, "-2/2*(coil_width[1]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+2*space[2]",
-				"Y:="			, "l1/2+space[3]",
+				"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 				"Z:="			, "-2/2*(coil_width[1]+move_z[1])"
 			]
 		],
@@ -1531,13 +1531,13 @@ oEditor.CreatePolyline(
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2+2*space[2]",
-				"Y:="			, "l1/2+space[3]",
+				"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 				"Z:="			, "-2/2*(coil_width[1]+move_z[1])"
 			],
 			[
 				"NAME:PLPoint",
 				"X:="			, "w1/2 + 0.5*2*(coil_width[1]+space[2])",
-				"Y:="			, "l1/2+space[3]",
+				"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 				"Z:="			, "-2/2*(coil_width[1]+move_z[1])"
 			]
 		],
@@ -1613,43 +1613,43 @@ if N1>2 :
 				[
 					"NAME:PLPoint",
 					"X:="			, "w1/2+0.5*space[2]",
-					"Y:="			, "l1/2+space[3]",
+					"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 					"Z:="			, "0mm"
 				],
 				[
 					"NAME:PLPoint",
 					"X:="			, "w1/2",
-					"Y:="			, "l1/2+space[3]",
+					"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 					"Z:="			, "0mm"
 				],
 				[
 					"NAME:PLPoint",
-					"X:="			, "-w1/2-space[2]",
-					"Y:="			, "l1/2+space[3]",
+					"X:="			, "-w1/2-space[2]-coil_width[1]/2",
+					"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 					"Z:="			, "-1/2*(coil_width[1]+move_z[1])"
 				],
 				[
 					"NAME:PLPoint",
-					"X:="			, "-w1/2-space[2]",
-					"Y:="			, "-l1/2-space[3]",
+					"X:="			, "-w1/2-space[2]-coil_width[1]/2",
+					"Y:="			, "-l1/2-space[3]-coil_width[1]/2",
 					"Z:="			, "-1/2*(coil_width[1]+move_z[1])"
 				],
 				[
 					"NAME:PLPoint",
-					"X:="			, "w1/2+space[2]",
-					"Y:="			, "-l1/2-space[3]",
+					"X:="			, "w1/2+space[2]+coil_width[1]/2",
+					"Y:="			, "-l1/2-space[3]-coil_width[1]/2",
 					"Z:="			, "-2/2*(coil_width[1]+move_z[1])"
 				],
 				[
 					"NAME:PLPoint",
-					"X:="			, "w1/2+space[2]",
-					"Y:="			, "l1/2+space[3]",
+					"X:="			, "w1/2+space[2]+coil_width[1]/2",
+					"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 					"Z:="			, "-2/2*(coil_width[1]+move_z[1])"
 				],
 				[
 					"NAME:PLPoint",
 					"X:="			, "w1/2+0.5*space[2]",
-					"Y:="			, "l1/2+space[3]",
+					"Y:="			, "l1/2+space[3]+coil_width[1]/2",
 					"Z:="			, "-2/2*(coil_width[1]+move_z[1])"
 				]
 			],

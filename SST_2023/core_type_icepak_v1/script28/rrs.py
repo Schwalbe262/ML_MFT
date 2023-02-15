@@ -129,7 +129,7 @@ def run_simul(version_idx_str):
     # ==============================
     # STEP 1-5 : 
 
-    h1_min = max(N1*coil_width1 + (N1)*move_z1 + 2*abs(offset_z1), N1*coil_width2 + (N1)*move_z2 + 2*abs(offset_z2))
+    h1_min = max(N1*coil_width1 + (N1+0.5)*move_z1 + 2*abs(offset_z1), N1*coil_width2 + (N1+0.5)*move_z2 + 2*abs(offset_z2))
 
     
     if h1_min < 150 :
@@ -264,9 +264,9 @@ def run_simul(version_idx_str):
     print(temp)
 
 
-    final_data = np.loadtxt(f'Z:\\Autosimul_data\\MFT\\SST_2023\\core_type_icepak_v1\\{COMPUTER_NAME}\\script1\\temp_data.csv', delimiter=",")
+    final_data = np.loadtxt(f'Z:\\Autosimul_data\\MFT\\SST_2023\\core_type_icepak_v1\\{COMPUTER_NAME}\\script28\\temp_data.csv', delimiter=",")
     new_data1 = np.vstack((final_data, temp))
-    np.savetxt(f'Z:\\Autosimul_data\\MFT\\SST_2023\\core_type_icepak_v1\\{COMPUTER_NAME}\\script1\\temp_data.csv',new_data1,delimiter=",")
+    np.savetxt(f'Z:\\Autosimul_data\\MFT\\SST_2023\\core_type_icepak_v1\\{COMPUTER_NAME}\\script28\\temp_data.csv',new_data1,delimiter=",")
 
 
 
@@ -279,14 +279,14 @@ for i in range(0, 10000):
 
     try :
         try:
-            os.remove(f'.\ML_aedt\ML1.aedt.lock')
+            os.remove(f'.\ML_aedt\ML28.aedt.lock')
         except:
             time.sleep(1)
-        if os.path.isfile(f'.\ML_aedt\ML1.aedt') :
-            os.remove(f'.\ML_aedt\ML1.aedt')
+        if os.path.isfile(f'.\ML_aedt\ML28.aedt') :
+            os.remove(f'.\ML_aedt\ML28.aedt')
         time.sleep(1)	
 
-        shutil.copy(f'.\ML_aedt\ML_ref.aedt',f'.\ML_aedt\ML1.aedt')
+        shutil.copy(f'.\ML_aedt\ML_ref.aedt',f'.\ML_aedt\ML28.aedt')
         time.sleep(1)
 
         try:
@@ -295,13 +295,13 @@ for i in range(0, 10000):
             print(f'error number {i}')
             print(e)
 
-        if os.path.isfile(f'.\ML_aedt\ML1.aedt') :
-            os.remove(f'.\ML_aedt\ML1.aedt')
+        if os.path.isfile(f'.\ML_aedt\ML28.aedt') :
+            os.remove(f'.\ML_aedt\ML28.aedt')
         time.sleep(1)	
 
-        shutil.rmtree(f'.\ML_aedt\ML1.aedtresults')
+        shutil.rmtree(f'.\ML_aedt\ML28.aedtresults')
         try:
-            os.remove(f'.\ML_aedt\ML1.aedt.lock')
+            os.remove(f'.\ML_aedt\ML28.aedt.lock')
         except:
             time.sleep(1)
     except :

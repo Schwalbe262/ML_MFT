@@ -129,7 +129,7 @@ def run_simul(version_idx_str):
     # ==============================
     # STEP 1-5 : 
 
-    h1_min = max(N1*coil_width1 + (N1)*move_z1 + 2*abs(offset_z1), N1*coil_width2 + (N1)*move_z2 + 2*abs(offset_z2))
+    h1_min = max(N1*coil_width1 + (N1+0.5)*move_z1 + 2*abs(offset_z1), N1*coil_width2 + (N1+0.5)*move_z2 + 2*abs(offset_z2))
 
     
     if h1_min < 150 :

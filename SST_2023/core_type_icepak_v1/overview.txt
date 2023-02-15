@@ -1,0 +1,86 @@
+2023년 2월 15일
+
+고주파변압기 방열 모델 생성
+
+- 변수 리스트
+
+0~9 : N1, w1, l1, l2, h1, space1, space2, space3, space4, fillet_core
+
+10~19 : fillet_epoxy, coil_width1, coil_width2, move_z1, move_z2, offset_z1, offset_z2, epoxy1, epoxy2, LVloss 
+
+20~29 : HVloss, coreloss, epoxy_thermal_coeff, core_thermal_coeff, cold_x, cold_y, cold_z, cold_x2, cold_y2, cold_z2
+
+- 변수 설명
+
+00 | N1 | 변압기 턴수
+01 | w1 | 코어 형상 파라미터
+02 | l1 | 코어 형상 파라미터
+03 | l2 | 코어 형상 파라미터
+04 | h1 | 코어 형상 파라미터
+05 | space1 | 코어와 LV 권선과 x방향 간격
+06 | space2 | 코어와 LV 권선과 y방향 간격
+07 | space3 | 코어와 HV 권선과 x방향 간격
+08 | space4 | 코어와 HV 권선과 y방향 간격
+09 | fillet_core | 코어의 fillet 크기
+
+10 | fillet_epoxy | 에폭시의 fillet 크기
+11 | coil_width1 | LV 권선의 지름
+12 | coil_width2 | HV 권선의 지름
+13 | move_z1 | LV 권선간의 간격
+14 | move_z2 | HV 권선간의 간격
+15 | offset_z1 | LV 권선의 센터 offset
+16 | offset_z2 | HV 권선의 센터 offset
+17 | epoxy_x | HV 권선 끝면 기준 에폭시 표면과의 거리 (x방향)
+18 | epoxy_y | HV 권선 끝면 기준 에폭시 표면과의 거리 (y방향)
+19 | LV_loss | LV 권선 손실
+
+20 | HV_loss | HV 권선 손실
+21 | core_loss | 코어 손실
+22 | epoxy_thermal_coeff | 에폭시 열전도율 물성치
+23 | core_thermal_coeff | 코어 열전도율 물성치
+24 | cold_x | 콜드플레이트 x방향 추가 길이 (양면 각각 길이)
+25 | cold_y | 콜드플레이트 y방향 추가 길이 (양면 각각 길이) (fillet 적용시 기준)
+26 | cold_z | 콜드플레이트 z방향 높이
+27 | cold_x2 | 콜드플레이트 스커트 x방향 길이
+28 | cold_y2 | 콜드플레이트 스커트 y방향 길이
+29 | cold_z2 | 콜드플레이트 스커트 z방향 높이
+
+30 | epoxy_gap |
+31 | bobin_thick | 
+32 | bobin_skirt |
+
+
+- 길이 제한 우선순위
+
+00 | LV_loss | 없음 | 0~500 | 1
+01 | HV_loss | 없음 | 0~500 | 1
+02 | core_loss | 없음 | 0~1000 | 1
+03 | epoxy_thermal_coeff | 없음 | 0.1~2.0 | 0.01
+04 | core_thermal_coeff | 없음 | 4~200 | 1
+05 | cold_x1 | 없음 | 0~50 | 1
+06 | cold_y1 | 없음 | 0~50 | 1
+07 | cold_z1 | 없음 | 5~30 | 1
+08 | N1 | 없음 | 2~10 | 1
+09 | offset_z1 | 없음 | -20~20 | 0.1
+10 | offset_z2 | 없음 | -20~20 | 0.1
+11 | move_z1 | 없음 | 0.5~8 | 0.1
+12 | move_z2 | 없음 | 0.5~8 | 0.1
+13 | coil_width1 | 없음 | 2~15 | 0.1
+14 | coil_width2 | 없음 | 2~15 | 0.1
+15 | space1 | 없음 | 2~50 | 1 
+16 | space2 | 없음 | 2~50 | 1 
+17 | space3 | 없음 | 2~50 | 1 
+18 | space4 | 없음 | 2~50 | 1 
+19 | epoxy_x | 없음 | 5~25 | 1
+20 | epoxy_y | 없음 | 5~25 | 1
+21 | w1 | 없음 | 20~200 | 1
+22 | l1 | 없음 | 10~50 | 1
+23 | cold_x2 | cold_x보다는 작아야 함 | 0~cold_x | 1
+24 | cold_y2 | cold_y보다는 작아야 함 | 0~cold_y | 1
+25 | cold_z2 | l1보다는 작아야 함 | 0~(l1-5) | 1
+26 | fillet_epoxy | w1+2*coil_width1+2*space1+2*epoxy_x 또는 l1+2*coil_width1+2*space2+2*epoxy_y 중 작은 값의 절반보다 작아야 함 | 0~15 | 0.1
+27 | l2 | coil_width1 + coil_width2 + space2 + space4 + epoxy_y 보다는 커야 함 | (coil_width1 + coil_width2 + space2 + space4 + epoxy_y + 5) ~ 180 | 1
+28 | fillet_core | (2*l1+l2)/2보다 작아야 함 | 0~(2*l1+l2)/2*0.5 | 0.1
+29 | h1 | N1*coil_width1 + (N1-1)*move_z1 + 2*abs(offset_z1) 또는 N1*coil_width2 + (N1-1)*move_z2 + 2*abs(offset_z2) 중 큰 값보다 커야 함 | 
+
+
